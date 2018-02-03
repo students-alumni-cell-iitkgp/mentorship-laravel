@@ -47,10 +47,19 @@
 <footer style="background-color:black; color:white; text-align:center; padding:10px; position:relative; bottom:0px; width:100%">&copy; Students' Alumni Cell, IIT Kharagpur
   <ul class="soc">
 
-    <li><a class="soc-facebook"  href="//www.facebook.com/iitkgp.alumnicell?fref=ts&ref=br_tf" target="_blank"></a></li>
-    <li><a class="soc-twitter"   href="//twitter.com/IITKgpAlumni"target="_blank"></a></li>
-    <li><a class="soc-linkedin"  href="//www.linkedin.com/edu/school?id=13500&trk=prof-following-school-logo"target="_blank"></a></li>
-    <li><a class="soc-youtube soc-icon-last" href="//www.youtube.com/channel/UCtnSs1CT59Rd8L6VlOAxzRA"target="_blank"></a></li>
+    <li><a class="btn btn-social-icon btn-facebook"  href="//www.facebook.com/iitkgp.alumnicell?fref=ts&ref=br_tf" target="_blank">
+        <span class="fa fa-facebook"></span>
+    </a></li>
+    <li><a class="btn btn-social-icon btn-twitter"   href="//twitter.com/IITKgpAlumni"target="_blank"> <span class="fa fa-twitter"></span></a></li>
+    <li><a class="btn btn-social-icon btn-linkedin"  href="//www.linkedin.com/edu/school?id=13500&trk=prof-following-school-logo"target="_blank">
+        <span class="fa fa-linkedin"></span>
+    </a></li>
+    <li><a class="btn btn-social-icon btn-youtube" href="//www.youtube.com/channel/UCtnSs1CT59Rd8L6VlOAxzRA"target="_blank">
+        <span class="fa fa-youtube"></span>
+    </a></li>
+    <li><a class="btn btn-social-icon btn-twitter">
+        <span class="fa fa-twitter"></span>
+    </a></li>
 </ul>
 </footer>
 
