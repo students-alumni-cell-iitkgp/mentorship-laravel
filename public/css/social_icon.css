@@ -84,37 +84,37 @@ margin-top:10px;
     background-color: #3e5b98;
 }
 .soc-facebook:before {
-    content:'b';
+    content:'f';
 }
 .soc-twitter {
     background-color: #4da7de;
 }
 .soc-twitter:before {
-    content:'a';
+    content:'t';
 }
 .soc-linkedin {
     background-color: #3371b7;
 }
 .soc-linkedin:before {
-    content:'j';
+    content:'in';
 }
 .soc-youtube {
     background-color: #e02a20;
 }
 .soc-youtube:before {
-    content:'r';
+    content:'y';
 }
 .soc-wikipedia {
     background-color: #000000;
 }
 .soc-wikipedia:before {
-    content:'N';
+    content:'w';
 }
 .soc-email1 {
     background-color: #578AD6;
 }
 .soc-email1:before {
-    content:'<';
+    content:'g';
 }
 
 
