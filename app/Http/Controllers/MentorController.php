@@ -43,11 +43,15 @@ class MentorController extends Controller
 			'department' => request('department'),
 			'email' => request('email'),
 			'pout' =>request('pout'),
+			'foe' =>request('foe'),
+			'ccity' =>request('ccity'),
 			'mentee' => request('mentee'),
 			'pref1' =>request('pref1'),
 			'pref2' =>request('pref2'),
 			'pref3' =>request('pref3'),
 			'phone' => request('phone'),
+			'fb' => request('fb'),
+			'linkedin' => request('linkedin'),
 			'firm' => request('firm'),
 			'desg' => request('desg')
 

@@ -151,7 +151,7 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="q1" class="form-control" placeholder="EWhat is the most important thing you wish to know from your mentor ?" required="required">
+							<input type="text" name="q1" class="form-control" placeholder="What is the most important thing you wish to know from your mentor ?" required="required">
 						</div>
 					</div>
 
@@ -160,6 +160,13 @@
 							<input type="text" name="q2" class="form-control" placeholder="What are your major reasons for joining the mentorship programme ?" required="required">
 						</div>
 					</div>
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="hcity" class="form-control" placeholder="Enter your hometown" required="required">
+						</div>
+					</div>
+
 
 					<div class="form-group" >
 						<div class="col-sm-12" >

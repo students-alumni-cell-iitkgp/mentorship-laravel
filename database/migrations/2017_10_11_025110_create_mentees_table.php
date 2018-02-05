@@ -30,6 +30,7 @@ class CreateMenteesTable extends Migration
             $table->text('phone');
             $table->text('cgpa');
             $table->text('current');
+            $table->text('hcity');
         });
     }
 

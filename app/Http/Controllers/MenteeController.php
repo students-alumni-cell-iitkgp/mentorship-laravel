@@ -54,7 +54,8 @@ class MenteeController extends Controller
 			'q1' => request('q1'),
 			'q2' => request('q2'),
 			'cgpa' => request('cgpa'),
-			'current' => request('current')
+			'current' => request('current'),
+			'hcity' => request('hcity')
 
 		]);
 		$user = User::create([

@@ -102,15 +102,32 @@
 					</div>
 
 					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="foe" class="form-control" placeholder="Enter Your Field Of Expertise" required="required">
+
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="ccity" class="form-control" placeholder="Enter Your Current City" required="required">
+
+						</div>
+					</div>						
+
+					<div class="form-group">
 						<div class="col-sm-3">
 							<h4>Preferred No. Of Mentees</h4>
 						</div>
 						<div class="col-sm-4">
 							<select name='mentee' class="form-control">
-								<option value="1">One</option>
 								<option value="2">Two</option>
 								<option value="3">Three</option>
 								<option value="4">Four</option>
+								<option value="5">Five</option>
+								<option value="6">Six</option>
+								<option value="7">Seven</option>
+								<option value="8">Eight</option>
 							</select>
 						</div>
 					</div>
@@ -254,14 +271,30 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="firm" class="form-control" placeholder="Enter Your Organisation">
+							<input type="text" name="fb" class="form-control" placeholder="Enter Your Facebook Link" required="required">
+
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="linkedin" class="form-control" placeholder="Enter Your Linkedin Link" required="required">
+
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="firm" class="form-control" placeholder="Enter Your Organisation" required="required">
 
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="desg" class="form-control" placeholder="Enter Your Designation">
+							<input type="text" name="desg" class="form-control" placeholder="Enter Your Designation" required="required">
 						</div>
 					</div>
 					@include('layouts.errors')
