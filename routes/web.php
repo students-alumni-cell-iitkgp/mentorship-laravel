@@ -30,4 +30,8 @@ Route::get('/faq', function () {
 Route::get('/icebreaker', function () {
     return view('icebreaker');
 });
+
+
+
+Route::get('/givepreference','PreferenceController@index');
 ?>

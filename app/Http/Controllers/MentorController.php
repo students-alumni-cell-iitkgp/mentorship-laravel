@@ -24,6 +24,7 @@ class MentorController extends Controller
 	*/
 	public function create()
 	{
+
 		return view ('mentor.registration');
 	}
 	/*
@@ -35,7 +36,8 @@ class MentorController extends Controller
 	{
 
 		$this->validate(request(),[
-			'password' => 'required|confirmed'
+			'password' => 'required|confirmed',
+			'email' => 'unique:users'
 		]);
 		Mentor::create([
 			'name' => request('name'),

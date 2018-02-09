@@ -20,6 +20,11 @@
 </head>
 <body>
 	@include('profile.navbar')
+	<br>
+	<br>
+	<br>
+	<br>
+
 	@yield('content')
 </body>	
 @include('profile.footer')

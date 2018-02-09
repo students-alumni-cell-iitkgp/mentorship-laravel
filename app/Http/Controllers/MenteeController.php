@@ -26,7 +26,8 @@ class MenteeController extends Controller
 	*/
 	public function create()
 	{
-		return view ('mentee.registration');
+		//return view ('mentee.registration');
+		return view ('mentee.staytuned');
 	}
 
 	/*
