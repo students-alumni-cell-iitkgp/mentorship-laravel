@@ -21,11 +21,15 @@ class CreateMentorsTable extends Migration
             $table->text('password');
             $table->text('department');
             $table->text('pout');
+            $table->text('foe');
+            $table->text('ccity');
             $table->integer('mentee');
             $table->text('pref1');
             $table->text('pref2');
             $table->text('pref3');
             $table->text('phone');
+            $table->text('fb');
+            $table->text('linkedin');
             $table->text('firm');
             $table->text('desg');
         });

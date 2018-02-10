@@ -3,6 +3,11 @@
 	Action of the form page uses Mentee Controller calling store function
  -->
 @include('../home')
+
+<style>
+    select:invalid { color: gray; }
+</style>
+
 <!-- Modal Trigger -->
 <a class="waves-effect waves-light btn modal-trigger" style="display: none;" href="#modal_s"></a>
 <div id="modal_s" class="modal"  role="dialog" >
@@ -38,14 +43,14 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="password" name="password_confirmation" class="form-control" placeholder="Enter your password again" required="required">
+							<input type="password" name="password_confirmation" class="form-control" placeholder="Re-Enter your password" required="required">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<select name='department' class='form-control'>
-								<option value='0'>Select Your Department</option>
+							<select required name='department' class='form-control'  >
+								<option  value="" disabled selected >Select Your Department</option>
 								<option value="AE">Aerospace Engineering</option>
 								<option value="AG">Agricultural & Food Engineering</option>
 								<option value="AR">Architecture & Regional Planning</option>
@@ -92,9 +97,9 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<select name='hall' class='form-control'>
-								<option value='0'>Select Your Hall</option>
-								<option value="SAM">Ashutosh Mukherjee  Hall</option>
+							<select required name='hall' class='form-control' class="required">
+								<option  value="" disabled selected >Select Your Hall</option>
+								<option value="SAM">Sir Ashutosh Mukherjee  Hall</option>
 								<option value="AZ">Azad  Hall</option>
 								<option value="BCR">B C Roy  Hall</option>
 								<option value="BRAH">B R Ambedkar  Hall</option>
@@ -120,7 +125,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="roll" class="form-control" placeholder="Enter your Roll" required="required">
+							<input type="text" name="roll" class="form-control" placeholder="Enter your Roll No." required="required">
 						</div>
 					</div>
 					<div class="form-group">
@@ -137,35 +142,42 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">							
-							<select name='current' class='form-control'>
-								<option value='-1'>Choose your Current Academic Year</option>
+							<select required name='current' class='form-control' class="required">
+								<option  value="" disabled selected >Choose your Current Academic Year</option>
 								<option value='1'>1</option>
 								<option value='2'>2</option>
 								<option value='3'>3</option>
 								<option value='4'>4</option>
 								<option value='5'>5</option>
-								<option value='6'>6</option>
+				
 							</select>
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="q1" class="form-control" placeholder="EWhat is the most important thing you wish to know from your mentor ?" required="required">
+							<input type="text" name="q1" class="form-control" placeholder="What is the most important thing you wish to know from your mentor ?" required="required" maxlength="200">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="q2" class="form-control" placeholder="What are your major reasons for joining the mentorship programme ?" required="required">
+							<input type="text" name="q2" class="form-control" placeholder="What are your major reasons for joining the mentorship programme ?" required="required" maxlength="200">
 						</div>
 					</div>
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="hcity" class="form-control" placeholder="Enter your hometown/Location of Summer Internship" required="required" maxlength="40">
+						</div>
+					</div>
+
 
 					<div class="form-group" >
 						<div class="col-sm-12" >
 							<h4>In which field do you want to  be Mentored?</h4>
-							<select name='pref1' class='form-control'>
-								<option value='-1'>Choose your 1st Preference</option>
+							<select required name='pref1' class='form-control' class="required">
+								<option  value="" disabled selected >Choose your 1st Preference</option>
 								<option value='4'>Banking & Finance</option>
 								<option value='23'>Entrepreneurship</option>
 								<option value='24'>Consulting</option>
@@ -202,8 +214,8 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<select name='pref2' class='form-control'>
-								<option value='-1'>Choose your 2nd Preference</option>
+							<select required name='pref2' class='form-control' class="required">
+								<option  value="" disabled selected >Choose your 2nd Preference</option>
 
 								<option value='4'>Banking & Finance</option>
 								<option value='23'>Entrepreneurship</option>
@@ -241,8 +253,8 @@
 					
 					<div class="form-group">
 						<div class="col-sm-12">
-							<select name='pref3' class='form-control'>
-								<option value='-1'>Choose your 3rd Preference</option>
+							<select required name='pref3' class='form-control' class="required">
+								<option  value="" disabled selected >Choose your 3rd Preference</option>
 								<option value='4'>Banking & Finance</option>
 								<!-- Deleted Management Consultancy pref 10 -->
 								<option value='23'>Entrepreneurship</option>

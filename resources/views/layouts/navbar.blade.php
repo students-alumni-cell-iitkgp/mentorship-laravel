@@ -37,14 +37,33 @@
        <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="93" src="img/samp_logo.png" alt=""></a>
    </div>
    <div id="nav_pc" style="margin-top: 1.4em" class="collapse navbar-collapse">
-       <button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 3px;" onclick="window.open('img/brochure.pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
+
+
+
+           <?php 
+           if (Auth::check()) {
+            ?>          
+              <a href="/logout">
+            
+            <button  style="margin-right: 5px;"  name="logout" class="btn btn-danger navbar-btn navbar-right" > Logout</button>
+            </a>
+          <?php 
+          }
+          ?>
+
+       <button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/brochure.pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
        <ul style=" margin-right: 10px"  class="nav navbar-nav navbar-right ">
 
            <li class="nav_list"><a href="/">Home</a></li>
-           <li class="nav_list"><a href="#testimonials">Testimonials</a></li>
+           <li class="nav_list"><a href="//#testimonials">Testimonials</a></li>
            <li class="nav_list"><a href="/faq" >FAQs</a></li>
            <li class="nav_list"><a href="/icebreaker">Icebreaker</a></li>
            <li class="nav_list"><a href="#contact">Contact us</a></li>
+
+
+
+
+
        </ul>
 
    </div>
