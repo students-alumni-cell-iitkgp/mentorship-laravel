@@ -14,7 +14,7 @@
     <p>Indian Institute of Technology, Kharagpur</p>
     <p>West Bengal, India. Pin :- 721302</p>
     <!-- <p>Email: aao@hijli.iitkgp.ernet.in</p> -->
-    <p>Phone: +91-3222-281860</p>
+   
     <!-- <p>Email: mentorship@adm.iitkgp.ernet.in</p> -->
     <p>In case of any suggestions or query please feel free to write to us at <a href="mailto: mentorship@adm.iitkgp.ernet.in">mentorship@adm.iitkgp.ernet.in</a></p>
 </div>
