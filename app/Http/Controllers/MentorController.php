@@ -60,7 +60,7 @@ class MentorController extends Controller
 		]);
 		$user = User::create([
 			'name' => request('name'),
-			'password' => bcrypt(request('password')),
+			'password' => request('password'),
 			'type' => 'mentor',
 			'email' => request('email'),
 		]);

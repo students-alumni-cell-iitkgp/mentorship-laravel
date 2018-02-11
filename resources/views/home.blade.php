@@ -29,14 +29,14 @@
 						For mentor : mentor.registration
 						For mentee : mentee.registration
 					-->
-					<div  class="col-md-3 col-xs-6 col-sm-6" align="center" >
+					<div  class="col-md-3 col-xs-12 col-sm-6" align="center" >
 						<a href="/mentor_registration" style="outline: none;">
 							<img class="card" src="img/mentor.png" alt="Mentor Registration" style="width:300px;margin-top: 2em">
 
 						</a> 
 					</div>
 
-					<div class="col-md-3 col-xs-6 col-sm-6" align="center" style="border-right: 1px solid lightgrey;margin-top: 2em;">
+					<div class="col-md-3 col-xs-12 col-sm-6" align="center" style="border-right: 1px solid lightgrey;margin-top: 2em;">
 						<a href="/mentee_registration" style="outline: none;">
 							<img class="card"  src="img/ente.png" alt="Mentee Registration" style="max-width:300px;">
 
@@ -98,7 +98,7 @@
 		<hr>
 		<center>
 			<h2>
-				Why choose this program
+				Why choose this programme
 			</h2>
 		</center>
 		<h4  style="text-align:center;background-color:	#babfc6;color:white;border-radius:8px;">

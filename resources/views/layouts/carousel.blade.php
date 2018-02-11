@@ -14,11 +14,11 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="img/slider1.jpg" alt="">
+				<img src="img/ALUMNS KA-2.jpg" alt="">
 			</div>
 
 			<div class="item">
-				<img src="img/slider2.jpg" alt="">
+				<img src="img/students ka 2.jpg" alt="">
 			</div>
 
 			<div class="item">

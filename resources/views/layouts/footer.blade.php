@@ -51,14 +51,14 @@
         <span class="fa fa-facebook"></span>
     </a></li>
     <li><a class="btn btn-social-icon btn-twitter"   href="//twitter.com/IITKgpAlumni"target="_blank"> <span class="fa fa-twitter"></span></a></li>
-    <li><a class="btn btn-social-icon btn-linkedin"  href="//www.linkedin.com/edu/school?id=13500&trk=prof-following-school-logo"target="_blank">
+    <li><a class="btn btn-social-icon btn-linkedin"  href="https://www.linkedin.com/company/students'-alumni-cell-iit-kharagpur/"target="_blank">
         <span class="fa fa-linkedin"></span>
     </a></li>
-    <li><a class="btn btn-social-icon btn-youtube" href="//www.youtube.com/channel/UCtnSs1CT59Rd8L6VlOAxzRA"target="_blank">
+    <li><a class="btn btn-social-icon btn-youtube" href="https://www.youtube.com/user/alumnicelliitkgp/videos" target="_blank">
         <span class="fa fa-youtube"></span>
     </a></li>
-    <li><a class="btn btn-social-icon btn-twitter">
-        <span class="fa fa-twitter"></span>
+    <li><a class="btn btn-social-icon btn-twitter" href="https://www.instagram.com/sac.iitkgp/" target="_blank">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
     </a></li>
 </ul>
 </footer>
