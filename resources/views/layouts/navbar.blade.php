@@ -55,7 +55,7 @@
        <ul style=" margin-right: 10px"  class="nav navbar-nav navbar-right ">
 
            <li class="nav_list"><a href="/">Home</a></li>
-           <li class="nav_list"><a href="//#testimonials">Testimonials</a></li>
+           <li class="nav_list"><a href="/#testimonials">Testimonials</a></li>
            <li class="nav_list"><a href="/faq" >FAQs</a></li>
            <li class="nav_list"><a href="/icebreaker">Icebreaker</a></li>
            <li class="nav_list"><a href="#contact">Contact us</a></li>
