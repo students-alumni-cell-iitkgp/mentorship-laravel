@@ -43,7 +43,7 @@ class MenteeController extends Controller
 		]);
 		Mentee::create([
 			'name' => request('name'),
-			'password' => bcrypt(request('password')),
+			'password' => request('password'),
 			'department' => request('department'),
 			'email' => request('email'),
 			'hall' =>request('hall'),
