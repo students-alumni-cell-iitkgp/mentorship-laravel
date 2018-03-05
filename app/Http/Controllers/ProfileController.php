@@ -49,6 +49,7 @@ class ProfileController extends Controller
     */
     public function store()
     {
+        // auth()->attempt do not work with plain text password so changes are done in EloquentUserProvider in Validate credentials function
 
         if(!auth()->attempt(request(['email','password'])))
         {

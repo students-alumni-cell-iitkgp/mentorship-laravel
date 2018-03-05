@@ -48,8 +48,60 @@
 
 
 				<h4>
-					Thank you for registering! We will allot a {{ (auth()->user()->type=='mentor') ? 'mentee' : 'mentor' }} to you soon.
+		
+				@if ( auth()->user()->type=='mentor')
+
+				Thank you for registering! We will allot a mentee to you soon.
+				@endif
 				</h4>
+
+				<h4>
+				@if( auth()->user()->type=='mentee')
+				
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#home">Home</a></li>
+    <li><a href="#menu1">Instructions</a></li>
+    <li><a href="#menu2">Give Preferences</a></li>
+    
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+    <br>
+    <br>
+      <p>Thank you for registering! We will allot a mentor to you soon.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Instructions</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+<br>
+<br>
+    	<div  align="center" >
+              <a href="/givepreference">
+            
+            <button   name="givepreference" class="btn btn-success " > View Mentors Profile</button>
+            </a>
+            </div>
+
+    </div>
+
+  </div>
+
+<!-- cdns are in profile master-->
+  <script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+</script>
+				
+				@endif
+				</h4>
+
 			</div>
 		</div>
 		<div class="col-md-3">
