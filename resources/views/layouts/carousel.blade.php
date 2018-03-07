@@ -18,7 +18,7 @@
 			</div>
 
 			<div class="item">
-				<img src="img/students ka 2.jpg" alt="">
+				<img src="img/SampWebsite.JPG" alt="">
 			</div>
 
 			<div class="item">

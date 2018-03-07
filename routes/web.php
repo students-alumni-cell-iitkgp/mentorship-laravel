@@ -39,4 +39,6 @@ Route::get('/gpreference','PreferenceController@create');
 
 Route::post('/gpreference','PreferenceController@store');
 
+Route::get('/addcode','PreferenceCodeController@addcode');
+
 ?>

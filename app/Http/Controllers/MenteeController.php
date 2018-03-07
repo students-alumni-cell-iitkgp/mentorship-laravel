@@ -27,7 +27,7 @@ class MenteeController extends Controller
 	public function create()
 	{
 		//return view ('mentee.registration');
-		return view ('mentee.staytuned');
+		return view ('mentee.registration');
 	}
 
 	/*
@@ -51,12 +51,14 @@ class MenteeController extends Controller
 			'pref1' =>request('pref1'),
 			'pref2' =>request('pref2'),
 			'pref3' =>request('pref3'),
-			'phone' => request('phone'),
 			'q1' => request('q1'),
 			'q2' => request('q2'),
 			'cgpa' => request('cgpa'),
 			'current' => request('current'),
-			'hcity' => request('hcity')
+			'hcity' => request('hcity'),
+			'phone' => request('phone'),			
+			'fb'=>request('fb'),
+			'linkedin'=>request('linkedin')
 
 		]);
 		$user = User::create([

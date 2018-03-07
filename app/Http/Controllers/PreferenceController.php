@@ -7,6 +7,7 @@ use App\Mentor;
 use App\Mentee;
 use App\User;
 use App\Preference;
+use App\PreferenceCode;
 use Auth;
 
 class PreferenceController extends Controller
@@ -18,6 +19,7 @@ class PreferenceController extends Controller
         {
     $mentors  = Mentor::get();
     $preferences = Preference::get();
+    $preferencecodes = PreferenceCode::get();
 
             $user = auth()->user();
         if($user->type == 'mentor')
@@ -27,7 +29,7 @@ class PreferenceController extends Controller
 
         $message = '';
   
-   	return view('preference',compact('mentors','message','details','preferences')) ;  
+   	return view('preference',compact('mentors','message','details','preferences','preferencecodes')) ;  
 
     } 
     else 
@@ -39,6 +41,11 @@ class PreferenceController extends Controller
 
         if(Auth::check())
         {
+
+    $preferences = Preference::get();
+
+
+
             $mentors  = Mentor::get();
 
             $user = auth()->user();
@@ -48,7 +55,7 @@ class PreferenceController extends Controller
             $details = Mentee::where('email',$user->email)->first();
 
              $message = '';
-            return view ('mentee.gpreference',compact('message','mentors','details'));
+            return view ('mentee.gpreference',compact('message','mentors','details','preferences'));
         }
         else
             return redirect('/');
