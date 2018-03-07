@@ -26,6 +26,9 @@
      null,
      null,
      null,
+     null,
+     null,
+     null,
     // { "searchable": false },
      //{ "searchable": false },
     // null,
@@ -36,6 +39,8 @@
    document.getElementById("main").style.marginLeft = "250px";
  } );
 
+<?php 
+/*
  function copy_mail(element) {
 
  var $temp = $("<input>");
@@ -45,6 +50,9 @@
  $temp.remove();
  alert("Emails have been succesfully copied!");
 }
+*/
+?>
+
 </script>
 <style type="text/css">
     body {
@@ -56,7 +64,12 @@
  
 
     @include('profile.navbar')
-  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="container">
     @if($message!='')
     <div class="alert alert-success">
@@ -74,39 +87,149 @@
     <strong>Error : {{ session('Error') }}</strong>
   </div>
   @endif
-    To <strong>copy</strong> all the emails in the page : <button type="button" class="btn btn-primary" id="copy_mail" onclick="copy_mail('.email')">COPY</button>
+  <?php 
+   // To <strong>copy</strong> all the emails in the page : <button type="button" class="btn btn-primary" id="copy_mail" onclick="copy_mail('.email')">COPY</button>
+    ?>
     <br>
     <table id="example" class="display" cellspacing="0" width="100%">
       <thead>
        <tr>
         <th>ID</th>
-        <th>ALUMNI</th>
-        <th>EMAIL</th>
-        <th>INDUSTRY</th>
-        <th>TAGS</th>
+        <th>Area of Expertise</th>
+        <th>Department</th>
+        <th>Preference 1</th>
+        <th>Preference 2</th>
+        <th>Preference 3</th>
+        <th>Current City</th>
+        <th>Firm</th>
       
 
       </tr>
     </thead>
     <tbody>
       @foreach($mentors as $mentor)
+
+     <?php if ( $mentor['id'] < 9) { ?>
+
       <tr>
-        <td>{{$mentor['id']}}</td> 
-        <td>{{$mentor['name']}}</td>        
-        <td class="email">{{$mentor['email'].' '}}</td>
+
+        <td>18MP00{{$mentor['id']}}</td> 
+        <td>{{$mentor['foe']}}</td>        
+        <td class="email">{{$mentor['department'].' '}}</td>
+        <td>{{$mentor['pref1']}}</td>
+        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{$mentor['pref2']}}</td>
+
+        <?php } ?>
+
+        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{$mentor['pref3']}}</td>
+           <?php } ?>
+        <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
 
 
 
 
-    <td>{{$mentor['pout']}}</td>
+  </tr>
+  <?php }  elseif ( $mentor['id'] < 99 && $mentor['id'] > 9) { ?>
+
+      <tr>
+
+        <td>18MP0{{$mentor['id']}}</td> 
+        <td>{{$mentor['foe']}}</td>        
+        <td class="email">{{$mentor['department'].' '}}</td>
+        <td>{{$mentor['pref1']}}</td>
+        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{$mentor['pref2']}}</td>
+
+        <?php } ?>
+
+        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{$mentor['pref3']}}</td>
+           <?php } ?>
+        <td>{{$mentor['ccity']}}</td>
+        <td>{{$mentor['firm']}}</td>
+
+
 
 
   </tr>
+  <?php }  elseif ( $mentor['id'] > 99) { ?>
+
+      <tr>
+
+        <td>18MP{{$mentor['id']}}</td> 
+        <td>{{$mentor['foe']}}</td>        
+        <td class="email">{{$mentor['department'].' '}}</td>
+        <td>{{$mentor['pref1']}}</td>
+        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{$mentor['pref2']}}</td>
+
+        <?php } ?>
+
+        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{$mentor['pref3']}}</td>
+           <?php } ?>
+        <td>{{$mentor['ccity']}}</td>
+        <td>{{$mentor['firm']}}</td>
+
+
+
+
+  </tr>
+  <?php } ?>
   @endforeach
 </tbody>
 </table>
+<br>
+
+ @foreach($preferences as $preference)
+  <?php if(  auth()->user()->email == $preference['mentee_email'] ){ ?>
+  <div  align="center" >
+              <a href="/gpreference">
+            
+            <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
+            </a>
+            </div>
+
+ <?php }
+  else { ?>
+<div  align="center" >
+              <a href="/gpreference">
+            
+            <button   name="gpreference" class="btn btn-success " > Give Your Preferences</button>
+            </a>
+            </div>
+<?php }
+?>
+
+
+              @endforeach
+            <br>
+            <br>
+            <br>
 </div>
+
+
 
 
 <script type="text/javascript">

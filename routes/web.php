@@ -34,4 +34,9 @@ Route::get('/icebreaker', function () {
 
 
 Route::get('/givepreference','PreferenceController@index');
+
+Route::get('/gpreference','PreferenceController@create');
+
+Route::post('/gpreference','PreferenceController@store');
+
 ?>
