@@ -116,12 +116,12 @@
         <td>18MP00{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{$mentor['pref1']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
         <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
         <td>-----</td>
         <?php } 
         else { ?>
-        <td>{{$mentor['pref2']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
 
         <?php } ?>
 
@@ -129,11 +129,10 @@
         <td>-----</td>
         <?php } 
         else { ?>
-        <td>{{$mentor['pref3']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
            <?php } ?>
         <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
-
 
 
 
@@ -145,12 +144,12 @@
         <td>18MP0{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{$mentor['pref1']}}</td>
+        <td>{{App\PreferenceCode::find($mentor->pref1)->codename}}</td>
         <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
         <td>-----</td>
         <?php } 
         else { ?>
-        <td>{{$mentor['pref2']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
 
         <?php } ?>
 
@@ -158,7 +157,7 @@
         <td>-----</td>
         <?php } 
         else { ?>
-        <td>{{$mentor['pref3']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
            <?php } ?>
         <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
@@ -174,12 +173,12 @@
         <td>18MP{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{$mentor['pref1']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
         <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
         <td>-----</td>
         <?php } 
         else { ?>
-        <td>{{$mentor['pref2']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
 
         <?php } ?>
 
@@ -187,7 +186,7 @@
         <td>-----</td>
         <?php } 
         else { ?>
-        <td>{{$mentor['pref3']}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
            <?php } ?>
         <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
@@ -203,7 +202,12 @@
 <br>
 
  @foreach($preferences as $preference)
-  <?php if(  auth()->user()->email == $preference['mentee_email'] ){ ?>
+
+ @endforeach
+
+ 
+ 
+  @if(  auth()->user()->email == $preference['mentee_email'] )
   <div  align="center" >
               <a href="/gpreference">
             
@@ -211,19 +215,16 @@
             </a>
             </div>
 
- <?php }
-  else { ?>
+ 
+  @else 
 <div  align="center" >
               <a href="/gpreference">
             
             <button   name="gpreference" class="btn btn-success " > Give Your Preferences</button>
             </a>
             </div>
-<?php }
-?>
+@endif
 
-
-              @endforeach
             <br>
             <br>
             <br>

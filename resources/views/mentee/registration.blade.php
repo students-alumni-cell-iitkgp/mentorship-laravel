@@ -134,11 +134,7 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="phone" class="form-control" placeholder="Enter your Phone No." required="required">
-						</div>
-					</div>
+
 
 					<div class="form-group">
 						<div class="col-sm-12">							
@@ -289,6 +285,25 @@
 							</select>
 						</div>
 					</div>
+
+					<h3>Contact Details</h3>
+
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="phone" class="form-control" placeholder="Enter your Phone No." required="required">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="fb" class="form-control" placeholder="Enter your Facebook Profile link" required="required">
+						</div>
+					</div>										
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" required="required">
+						</div>
+					</div>
+
 					@include('layouts.errors')
 
 

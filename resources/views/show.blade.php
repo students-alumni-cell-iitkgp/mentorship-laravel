@@ -61,7 +61,7 @@
 
   <ul class="nav nav-tabs">
     <li class="active"><a href="#home">Home</a></li>
-    <li><a href="#menu1">Instructions</a></li>
+    <li><a href="#menu1">Guidelines</a></li>
     <li><a href="#menu2">Give Preferences</a></li>
     
   </ul>
@@ -73,8 +73,32 @@
       <p>Thank you for registering! We will allot a mentor to you soon.</p>
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Instructions</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h3>Guidelines</h3>
+      <p>
+      <h5>
+1) Login with your email-ID and the password set by you during registration to see the mentor preference list. 
+<br>
+<br>
+2) Go through the list of mentors in the “Give Preferences” tab carefully and look for the alumni whose interests / hometown / area of expertise match with yours. 
+<br>
+<br>
+3) After carefully evaluating the list of alumni on the web page, choose five alumni who you want to be mentored by and fill their Mentor IDs in the space given below in the descending order of preference. 
+<br>
+<br>
+4) After filling in the five text fields with distinct preferences, check once again and click on the submit button. 
+<br>
+<br>
+5) Please remember that the preference once submitted cannot be changed.
+<br>
+<br>
+6) You might or might not get an alumnus of your preference as the allotment is strictly based on first come - first serve basis. 
+<br>
+<br>
+7) You will be informed of the mentor allotted to you via email within 15 days of preference filling.
+<br>
+<br>
+</h5>
+      </p>
     </div>
     <div id="menu2" class="tab-pane fade">
 <br>
