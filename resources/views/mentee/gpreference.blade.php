@@ -1,3 +1,15 @@
+ @foreach($preferences as $preference)
+
+ @endforeach
+
+ 
+ 
+  @if(  auth()->user()->email == $preference['mentee_email'] )
+
+ <?php return Redirect::back()->withErrors(['msg', 'The Message']); ?>
+
+    @else 
+
 @include('../preference')
 
 <style>
@@ -88,3 +100,5 @@
 		$("#modal_s").modal('show');
 	});
 </script>
+
+@endif

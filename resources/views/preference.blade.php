@@ -218,9 +218,9 @@
  
   @else 
 <div  align="center" >
-              <a href="/gpreference">
+              <a href="/gpreference" target="_blank">
             
-            <button   name="gpreference" class="btn btn-success " > Give Your Preferences</button>
+            <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
             </a>
             </div>
 @endif
