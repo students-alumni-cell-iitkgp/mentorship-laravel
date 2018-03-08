@@ -61,7 +61,7 @@
 
   <ul class="nav nav-tabs">
     <li class="active"><a href="#home">Home</a></li>
-    <li><a href="#menu1">Guidelines</a></li>
+   <!-- <li><a href="#menu1">Guidelines</a></li> -->
     <li><a href="#menu2">Give Preferences</a></li>
     
   </ul>
@@ -70,11 +70,9 @@
     <div id="home" class="tab-pane fade in active">
     <br>
     <br>
-      <p>Thank you for registering! We will allot a mentor to you soon.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
+      <p>Thank you for registering! Fill in your preferences to get a mentor.</p>
       <h3>Guidelines</h3>
-      <p>
+    <p>
       <h5>
 1) Login with your email-ID and the password set by you during registration to see the mentor preference list. 
 <br>
@@ -99,7 +97,13 @@
 <br>
 </h5>
       </p>
+
     </div>
+ <!--   <div id="menu1" class="tab-pane fade">
+      <h3>Guidelines</h3>
+  
+    </div>
+    -->
     <div id="menu2" class="tab-pane fade">
 <br>
 <br>
