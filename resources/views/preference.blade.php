@@ -17,29 +17,29 @@
     $(document).ready(function() {
 
 
-    $('#example').DataTable(
-    {
-     "columns": [
+      $('#example').DataTable(
+      {
+       "columns": [
 
-     { "searchable": false },
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
-     null,
+       { "searchable": false },
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
+       null,
     // { "searchable": false },
      //{ "searchable": false },
     // null,
     // { "searchable": false },
-     ]
-   });
-   document.getElementById("mySidenav").style.width = "250px";
-   document.getElementById("main").style.marginLeft = "250px";
- } );
+    ]
+  });
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    } );
 
-<?php 
+    <?php 
 /*
  function copy_mail(element) {
 
@@ -55,15 +55,15 @@
 
 </script>
 <style type="text/css">
-    body {
-    background-image: url('../img/bg.jpg');
-  }
+body {
+  background-image: url('../img/bg.jpg');
+}
 </style>
 </head>
 <body>
  
 
-    @include('profile.navbar')
+  @include('profile.navbar')
   <br>
   <br>
   <br>
@@ -83,11 +83,11 @@
     </div>
     @endif
     @if (session('Error'))
-  <div class="alert alert-danger">
-    <strong>Error : {{ session('Error') }}</strong>
-  </div>
-  @endif
-  <?php 
+    <div class="alert alert-danger">
+      <strong>Error : {{ session('Error') }}</strong>
+    </div>
+    @endif
+    <?php 
    // To <strong>copy</strong> all the emails in the page : <button type="button" class="btn btn-primary" id="copy_mail" onclick="copy_mail('.email')">COPY</button>
     ?>
     <br>
@@ -102,14 +102,14 @@
         <th>Preference 3</th>
         <th>Current City</th>
         <th>Firm</th>
-      
+        
 
       </tr>
     </thead>
     <tbody>
       @foreach($mentors as $mentor)
 
-     <?php if ( $mentor['id'] < 9) { ?>
+      <?php if ( $mentor['id'] < 9) { ?>
 
       <tr>
 
@@ -130,14 +130,14 @@
         <?php } 
         else { ?>
         <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-           <?php } ?>
+        <?php } ?>
         <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
 
 
 
-  </tr>
-  <?php }  elseif ( $mentor['id'] < 99 && $mentor['id'] > 9) { ?>
+      </tr>
+      <?php }  elseif ( $mentor['id'] < 99 && $mentor['id'] > 9) { ?>
 
       <tr>
 
@@ -158,15 +158,15 @@
         <?php } 
         else { ?>
         <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-           <?php } ?>
+        <?php } ?>
         <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
 
 
 
 
-  </tr>
-  <?php }  elseif ( $mentor['id'] > 99) { ?>
+      </tr>
+      <?php }  elseif ( $mentor['id'] > 99) { ?>
 
       <tr>
 
@@ -187,47 +187,47 @@
         <?php } 
         else { ?>
         <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-           <?php } ?>
+        <?php } ?>
         <td>{{$mentor['ccity']}}</td>
         <td>{{$mentor['firm']}}</td>
 
 
 
 
-  </tr>
-  <?php } ?>
+      </tr>
+      <?php } ?>
+      @endforeach
+    </tbody>
+  </table>
+  <br>
+
+  @foreach($preferences as $preference)
+
   @endforeach
-</tbody>
-</table>
-<br>
 
- @foreach($preferences as $preference)
-
- @endforeach
-
- 
- 
-  @if(  auth()->user()->email == $preference['mentee_email'] )
+  
+  
+  @if( App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
   <div  align="center" >
-              <a href="/gpreference">
-            
-            <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
-            </a>
-            </div>
+    <a href="/gpreference">
+      
+      <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
+    </a>
+  </div>
 
- 
+  
   @else 
-<div  align="center" >
-              <a href="/gpreference" target="_blank">
-            
-            <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
-            </a>
-            </div>
-@endif
+  <div  align="center" >
+    <a href="/gpreference" target="_blank">
+      
+      <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
+    </a>
+  </div>
+  @endif
 
-            <br>
-            <br>
-            <br>
+  <br>
+  <br>
+  <br>
 </div>
 
 
