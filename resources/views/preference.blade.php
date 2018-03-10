@@ -35,33 +35,22 @@
     // { "searchable": false },
     ]
   });
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
+      
     } );
 
     <?php 
-/*
- function copy_mail(element) {
 
- var $temp = $("<input>");
- $("body").append($temp);
- $temp.val($(element).text()).select();
- document.execCommand("copy");
- $temp.remove();
- alert("Emails have been succesfully copied!");
-}
-*/
-?>
+    ?>
 
-</script>
-<style type="text/css">
-body {
-  background-image: url('../img/bg.jpg');
-}
+  </script>
+  <style type="text/css">
+  body {
+    background-image: url('../img/bg.jpg');
+  }
 </style>
 </head>
 <body>
- 
+
 
   @include('profile.navbar')
   <br>
@@ -87,9 +76,7 @@ body {
       <strong>Error : {{ session('Error') }}</strong>
     </div>
     @endif
-    <?php 
-   // To <strong>copy</strong> all the emails in the page : <button type="button" class="btn btn-primary" id="copy_mail" onclick="copy_mail('.email')">COPY</button>
-    ?>
+    
     <br>
     <table id="example" class="display" cellspacing="0" width="100%">
       <thead>
@@ -109,7 +96,7 @@ body {
     <tbody>
       @foreach($mentors as $mentor)
 
-      <?php if ( $mentor['id'] < 9) { ?>
+      @if ( $mentor['id'] < 9 && $mentor['full']==0) 
 
       <tr>
 
@@ -137,7 +124,35 @@ body {
 
 
       </tr>
-      <?php }  elseif ( $mentor['id'] < 99 && $mentor['id'] > 9) { ?>
+      @elseif ( $mentor['id'] < 9 && $mentor['full']>0) 
+
+      <tr style="background-color: red;">
+
+        <td>18MP00{{$mentor['id']}}</td> 
+        <td>{{$mentor['foe']}}</td>        
+        <td class="email">{{$mentor['department'].' '}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
+        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
+
+        <?php } ?>
+
+        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
+        <?php } ?>
+        <td>{{$mentor['ccity']}}</td>
+        <td>{{$mentor['firm']}}</td>
+
+
+
+      </tr>
+      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']==0)
 
       <tr>
 
@@ -166,7 +181,36 @@ body {
 
 
       </tr>
-      <?php }  elseif ( $mentor['id'] > 99) { ?>
+      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']>0)
+
+      <tr style="background-color: red;">
+
+        <td>18MP0{{$mentor['id']}}</td> 
+        <td>{{$mentor['foe']}}</td>        
+        <td class="email">{{$mentor['department'].' '}}</td>
+        <td>{{App\PreferenceCode::find($mentor->pref1)->codename}}</td>
+        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
+
+        <?php } ?>
+
+        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
+        <?php } ?>
+        <td>{{$mentor['ccity']}}</td>
+        <td>{{$mentor['firm']}}</td>
+
+
+
+
+      </tr>
+      @elseif ( $mentor['id'] > 99 && $mentor['full']==0)
 
       <tr>
 
@@ -195,7 +239,33 @@ body {
 
 
       </tr>
-      <?php } ?>
+      @elseif ( $mentor['id'] > 99 && $mentor['full']>0)
+
+      <tr style="background-color: red;">
+
+        <td>18MP{{$mentor['id']}}</td> 
+        <td>{{$mentor['foe']}}</td>        
+        <td class="email">{{$mentor['department'].' '}}</td>
+        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
+        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
+
+        <?php } ?>
+
+        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
+        <td>-----</td>
+        <?php } 
+        else { ?>
+        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
+        <?php } ?>
+        <td>{{$mentor['ccity']}}</td>
+        <td>{{$mentor['firm']}}</td>
+
+      </tr>
+      @endif
       @endforeach
     </tbody>
   </table>
@@ -210,7 +280,7 @@ body {
   @if( App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
   <div  align="center" >
     <a href="/gpreference">
-      
+
       <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
     </a>
   </div>
@@ -219,7 +289,7 @@ body {
   @else 
   <div  align="center" >
     <a href="/gpreference" target="_blank">
-      
+
       <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
     </a>
   </div>
