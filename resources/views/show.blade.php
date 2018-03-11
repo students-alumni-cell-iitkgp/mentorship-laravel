@@ -83,16 +83,19 @@
 3) After carefully evaluating the list of alumni on the web page, choose five alumni who you want to be mentored by and fill their Mentor IDs in the space given below in the descending order of preference. 
 <br>
 <br>
-4) After filling in the five text fields with distinct preferences, check once again and click on the submit button. 
+4) The mentors who have been marked red have been alloted to the fullest of their capacity. Kindly ignore those mentors while filling in the choices.
 <br>
 <br>
-5) Please remember that the preference once submitted cannot be changed.
+5) After filling in the five text fields with distinct preferences, check once again and click on the submit button. 
 <br>
 <br>
-6) You might or might not get an alumnus of your preference as the allotment is strictly based on first come - first serve basis. 
+6) Please remember that the preference once submitted cannot be changed. 
 <br>
 <br>
-7) You will be informed of the mentor allotted to you via email within 15 days of preference filling.
+7) You might or might not get an alumnus of your preference as the allotment is strictly based on first come - first serve basis.
+<br>
+<br>
+8) You will be informed of the mentor allotted to you via email within 15 days of preference filling.
 <br>
 <br>
 </h5>
