@@ -55,7 +55,8 @@ class MentorController extends Controller
 			'fb' => request('fb'),
 			'linkedin' => request('linkedin'),
 			'firm' => request('firm'),
-			'desg' => request('desg')
+			'desg' => request('desg'),
+			'full' => '0'
 
 		]);
 		$user = User::create([
