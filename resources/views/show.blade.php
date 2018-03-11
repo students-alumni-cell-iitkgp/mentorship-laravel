@@ -83,7 +83,7 @@
 3) After carefully evaluating the list of alumni on the web page, choose five alumni who you want to be mentored by and fill their Mentor IDs in the space given below in the descending order of preference. 
 <br>
 <br>
-4) The mentors who have been marked red have been alloted to the fullest of their capacity. Kindly ignore those mentors while filling in the choices.
+<b>4) The mentors who have been marked red have been alloted to the fullest of their capacity. Kindly ignore those mentors while filling in the choices.</b>
 <br>
 <br>
 5) After filling in the five text fields with distinct preferences, check once again and click on the submit button. 
