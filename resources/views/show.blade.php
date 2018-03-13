@@ -38,7 +38,7 @@
 			</div>
 		</div><!--col-md-3 ends -->
 
-		<div class="col-md-6">
+		<div class="col-md-7">
 			<br>
 
 			<div style="margin:30px 0px 5px 0px" class="well">
@@ -63,6 +63,7 @@
     <li class="active"><a href="#home">Home</a></li>
    <!-- <li><a href="#menu1">Guidelines</a></li> -->
     <li><a href="#menu2">Give Preferences</a></li>
+    <li><a href="#menu3">Your Preferences</a></li>
     
   </ul>
 
@@ -119,6 +120,92 @@
 
     </div>
 
+    <div id="menu3" class="tab-pane fade" style="overflow: auto ;">
+    <br>
+    <br>
+
+@if(App\Preference::where('mentee_email',Auth::user()->email)->count()==1)
+
+
+
+<?php $preferences= App\Preference::where('mentee_email',Auth::user()->email)->get() ;?>
+
+
+
+<?php $yourpreferences1 = App\Mentor::find(substr($preferences[0]['pf1'],-3)) ;?>
+<?php $yourpreferences2 = App\Mentor::find(substr($preferences[0]['pf2'],-3)) ;?>
+<?php $yourpreferences3 = App\Mentor::find(substr($preferences[0]['pf3'],-3)) ;?>
+<?php $yourpreferences4 = App\Mentor::find(substr($preferences[0]['pf4'],-3)) ;?>
+<?php $yourpreferences5 = App\Mentor::find(substr($preferences[0]['pf5'],-3)) ;?>
+
+
+        	<div  align="center" >
+        	<p>You have given the following preferences-</p>
+        	    </div>
+
+<br>
+ <table>
+  <tr>
+        <th>ID</th>
+        <th>Area of Expertise</th>
+        <th>Department</th>
+
+        <th>Current City</th>
+        <th>Firm</th>
+  </tr>
+  <tr>
+    <td>{{$preferences[0]['pf1']}}</td>
+    <td>{{$yourpreferences1['foe']}}</td>
+    <td>{{$yourpreferences1['department']}}</td>
+
+    <td>{{$yourpreferences1['ccity']}}</td>
+    <td>{{$yourpreferences1['firm']}}</td>
+  </tr>
+    <tr>
+    <td>{{$preferences[0]['pf2']}}</td>
+    <td>{{$yourpreferences2['foe']}}</td>
+    <td>{{$yourpreferences2['department']}}</td>
+
+    <td>{{$yourpreferences2['ccity']}}</td>
+    <td>{{$yourpreferences2['firm']}}</td>
+  </tr>
+    <tr>
+    <td>{{$preferences[0]['pf3']}}</td>
+    <td>{{$yourpreferences3['foe']}}</td>
+    <td>{{$yourpreferences3['department']}}</td>
+
+    <td>{{$yourpreferences3['ccity']}}</td>
+    <td>{{$yourpreferences3['firm']}}</td>
+  </tr>
+    <tr>
+    <td>{{$preferences[0]['pf4']}}</td>
+    <td>{{$yourpreferences4['foe']}}</td>
+    <td>{{$yourpreferences4['department']}}</td>
+    <td>{{$yourpreferences4['ccity']}}</td>
+    <td>{{$yourpreferences4['firm']}}</td>
+  </tr>
+    <tr>
+    <td>{{$preferences[0]['pf5']}}</td>
+    <td>{{$yourpreferences5['foe']}}</td>
+    <td>{{$yourpreferences5['department']}}</td>
+
+    <td>{{$yourpreferences5['ccity']}}</td>
+    <td>{{$yourpreferences5['firm']}}</td>
+  </tr>      
+
+</table>       	    
+
+@else()
+	        	<div  align="center" >
+        	<p>You have not given any preferences till now .Please fill in your preferences by visiting Give Preference Tab.</p>
+        	    </div>
+
+
+@endif
+
+    </div>
+
+
   </div>
 
 <!-- cdns are in profile master-->
@@ -135,7 +222,7 @@ $(document).ready(function(){
 
 			</div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-2">
 
 		</div>
 	</div>
