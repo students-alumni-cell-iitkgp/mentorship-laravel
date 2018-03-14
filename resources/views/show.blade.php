@@ -64,6 +64,7 @@
    <!-- <li><a href="#menu1">Guidelines</a></li> -->
     <li><a href="#menu2">Give Preferences</a></li>
     <li><a href="#menu3">Your Preferences</a></li>
+    <li><a href="#menu4">My Mentor</a></li>
     
   </ul>
 
@@ -199,6 +200,50 @@
 	        	<div  align="center" >
         	<p>You have not given any preferences till now .Please fill in your preferences by visiting Give Preference Tab.</p>
         	    </div>
+
+
+@endif
+
+    </div>
+        
+        <div id="menu4" class="tab-pane fade" >
+<br>
+<br>
+
+@if(App\Preference::where('mentee_email',Auth::user()->email)->count()==1)
+<?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
+      @if($mentorid[0]['mentorid']==0)
+            <div  align="center" >
+          <p>Mentor is not alloted to you yet.</p>
+              </div>
+
+      @else()
+      <div  align="center" >
+          <p>Your Mentor details are -</p> 
+
+      </div>
+      <br>
+<strong>Name:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->name }}
+<br>
+<br>
+<strong>Email:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->email }}
+<br>
+<br>
+<strong>Facebook Id:</strong> <a href="{{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->fb }}" target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->fb }} </a>
+<br>
+<br>
+<strong>LinkedIn Id:</strong> <a href=" {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
+"  target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
+    </a>
+        
+
+
+      @endif
+
+@else()
+            <div  align="center" >
+          <p>You have not given any preferences till now .Please fill in your preferences by visiting Give Preference Tab.</p>
+              </div>
 
 
 @endif
