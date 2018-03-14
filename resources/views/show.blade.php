@@ -244,6 +244,14 @@
 <strong>LinkedIn Id:</strong> <a href=" {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
 "  target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
     </a>
+    <br>
+<strong>Field of Expertise:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->foe }}
+<br>    
+<strong>Firm:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->firm }}
+<br>    
+<strong>Designation:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->desg }}
+<br>
+
     </h5>
         
         <br>
