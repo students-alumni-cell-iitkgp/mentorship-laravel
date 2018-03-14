@@ -58,7 +58,9 @@ class MenteeController extends Controller
 			'hcity' => request('hcity'),
 			'phone' => request('phone'),			
 			'fb'=>request('fb'),
-			'linkedin'=>request('linkedin')
+			'linkedin'=>request('linkedin'),
+			'mentorid' => '0'
+
 
 		]);
 		$user = User::create([
