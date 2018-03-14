@@ -60,15 +60,22 @@
 				
 
   <ul class="nav nav-tabs">
+  <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
+      @if($mentorid[0]['mentorid']==0)
     <li class="active"><a href="#home">Home</a></li>
    <!-- <li><a href="#menu1">Guidelines</a></li> -->
     <li><a href="#menu2">Give Preferences</a></li>
     <li><a href="#menu3">Your Preferences</a></li>
-    <li><a href="#menu4">My Mentor</a></li>
+    @else()
+    <li class="active"><a href="#menu4">My Mentor</a></li>
+   
+    @endif
     
   </ul>
 
   <div class="tab-content">
+    <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
+      @if($mentorid[0]['mentorid']==0)
     <div id="home" class="tab-pane fade in active">
     <br>
     <br>
@@ -198,15 +205,17 @@
 
 @else()
 	        	<div  align="center" >
-        	<p>You have not given any preferences till now .Please fill in your preferences by visiting Give Preference Tab.</p>
+        	<p>You have not given any Mentor preferences till now. Please fill in your preferences by navigating to "Give Preferences" tab.</p>
         	    </div>
 
 
 @endif
 
     </div>
-        
-        <div id="menu4" class="tab-pane fade" >
+
+
+        @else()
+        <div id="menu4" class="tab-pane fade in active">
 <br>
 <br>
 
@@ -214,41 +223,66 @@
 <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
       @if($mentorid[0]['mentorid']==0)
             <div  align="center" >
-          <p>Mentor is not alloted to you yet.</p>
+          <p>You have not been allotted a Mentor yet.Please keep checking the portal for further updates.</p>
               </div>
 
       @else()
-      <div  align="center" >
-          <p>Your Mentor details are -</p> 
+  
+          <p><h4> Congratulations,you have been allotted a mentor. We hope that it turns out to be a fruitful experience for you. The details of your mentor are as follows - </h4></p> 
 
-      </div>
       <br>
+      <h5>
 <strong>Name:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->name }}
 <br>
-<br>
+
 <strong>Email:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->email }}
 <br>
-<br>
+
 <strong>Facebook Id:</strong> <a href="{{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->fb }}" target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->fb }} </a>
 <br>
-<br>
+
 <strong>LinkedIn Id:</strong> <a href=" {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
 "  target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
     </a>
-        
+    <br>
+<strong>Field of Expertise:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->foe }}
+<br>    
+<strong>Firm:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->firm }}
+<br>    
+<strong>Designation:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->desg }}
+<br>
 
+    </h5>
+        
+        <br>
+        
+<h4>How to get started ?</h4>
+<p>
+<h5> 1) Your mentor has already been briefed with your details, so get in touch with him/her as early as possible.
+<br>
+2) You can further contact your alumnus/alumna via skype/phone as per convenience.
+<br>
+3) For a start, send an introductory email to your mentor requesting their contact number or to fix up a time for a friendly conversation. 
+<br>
+4)If you need our help in approaching your mentor or if you are unable to get in touch with him/her via email for any reason whatsoever, drop an email at  <a href="#"> mentorship@iitkgp.ernet.in </a>  or send us a message on our facebook page - <a href="https://www.facebook.com/mentorship.iitkgp/" target="_blank"> https://www.facebook.com/mentorship.iitkgp/ </a>
+</h5> </p>
 
       @endif
 
 @else()
             <div  align="center" >
-          <p>You have not given any preferences till now .Please fill in your preferences by visiting Give Preference Tab.</p>
+          <p>You have not given any Mentor preferences till now. Please fill in your preferences by navigating to "Give Preferences" tab.</p>
               </div>
 
 
 @endif
 
     </div>
+        
+
+
+
+    @endif
 
 
   </div>
