@@ -74,6 +74,17 @@
 								Log In
 							</button>
 						</div>
+
+
+						<div class="col-md-2" style="padding-top: -5px;margin-top: -15px;">
+						<a href="/fpassword">
+							<button   class="btn btn-danger">
+								Forgot Password
+							</button>
+						</a>	
+						</div>
+
+
 						<br><br>
 						<div class="col-md-12 col-sm-12 col-xs-12 " align="center">
 							@include('layouts.errors')

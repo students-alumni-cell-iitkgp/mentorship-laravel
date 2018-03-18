@@ -41,4 +41,8 @@ Route::post('/gpreference','PreferenceController@store');
 
 Route::get('/addcode','PreferenceCodeController@addcode');
 
+Route::get('/fpassword','PreferenceController@fp');
+
+Route::post('/fpassword','PreferenceController@fpstore');
+
 ?>

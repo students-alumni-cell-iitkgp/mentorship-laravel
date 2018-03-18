@@ -9,6 +9,7 @@ use App\User;
 use App\Preference;
 use App\PreferenceCode;
 use Auth;
+use DB;
 
 class PreferenceController extends Controller
 {
@@ -92,5 +93,33 @@ class PreferenceController extends Controller
                else
                 return redirect('/');
 
+        }
+
+
+        public function fp()
+        {
+            return view('forgotpassword');
+        }
+
+
+
+
+
+        public function fpstore(Request $request)
+        {
+
+        $this->validate(request(),[
+            'password' => 'required|confirmed'
+        ]);
+
+        $data = array();
+        $data['password'] = $request->password;
+
+
+        DB::table('mentees')->where('email',$request->email)->update($data);   
+        DB::table('mentors')->where('email',$request->email)->update($data); 
+        DB::table('users')->where('email',$request->email)->update($data);    
+
+        return redirect('/');
         }
     }
