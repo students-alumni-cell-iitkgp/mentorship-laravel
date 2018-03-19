@@ -219,7 +219,7 @@
 <br>
 <br>
 
-@if(App\Preference::where('mentee_email',Auth::user()->email)->count()==1)
+@if(App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
 <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
       @if($mentorid[0]['mentorid']==0)
             <div  align="center" >
