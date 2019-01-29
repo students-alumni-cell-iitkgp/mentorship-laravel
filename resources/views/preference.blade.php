@@ -271,10 +271,7 @@
   </table>
   <br>
 
-  @foreach($preferences as $preference)
-
-  @endforeach
-
+ 
   
   
   @if( App\Preference::where('mentee_email',Auth::user()->email)->count()>0)

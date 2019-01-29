@@ -1,14 +1,3 @@
- @foreach($preferences as $preference)
-
- @endforeach
-
- 
- 
-  @if(  auth()->user()->email == $preference['mentee_email'] )
-
- <?php return Redirect::back()->withErrors(['msg', 'The Message']); ?>
-
-    @else 
 
 @include('../preference')
 
@@ -33,49 +22,14 @@
 				<form class="form-horizontal" method="post" action="/gpreference">
 					{{ csrf_field() }}
 
-					<h4>Preference 1</h4>
+					<h4>Preference</h4>
 					<div class="form-group">
 						<div class="col-sm-12">
 							<input type="text" name="pf1" class="form-control" placeholder="Preference 1 ID" minlength="7" maxlength="7" required="required">
 						</div>
 					</div>
 
-					<h4>Preference 2</h4>
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="pf2" class="form-control" placeholder="Preference 2 ID" minlength="7" maxlength="7" required="required">
-						</div>
-					</div>
-
-					<h4>Preference 3</h4>
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="pf3" class="form-control" placeholder="Preference 3 ID" minlength="7" maxlength="7" required="required">
-						</div>
-					</div>
-
-					<h4>Preference 4</h4>
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="pf4" class="form-control" placeholder="Preference 4 ID" minlength="7" maxlength="7" required="required">
-						</div>
-					</div>
-
-
-
-					<h4>Preference 5</h4>
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="pf5" class="form-control" placeholder="Preference 5 ID" minlength="7" maxlength="7" required="required">
-						</div>
-					</div>
-					
-
-
-
-
-
-					
+								
 
 					@include('layouts.errors')
 
@@ -100,5 +54,3 @@
 		$("#modal_s").modal('show');
 	});
 </script>
-
-@endif

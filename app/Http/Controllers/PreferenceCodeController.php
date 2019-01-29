@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\PreferenceCode;
+use App\Preference;
 
 class PreferenceCodeController extends Controller
 {
@@ -156,6 +157,6 @@ class PreferenceCodeController extends Controller
     		'codename'=>'Civil Services'
 
     		]);     		
-
+        return view('home');
     }
 }

@@ -15,7 +15,7 @@ class AddMentoridToMentees extends Migration
     {
          Schema::table('mentees', function (Blueprint $table) {
             
-            $table->integer('mentorid')->default('0');
+            $table->z('mentorid')->default('0');
         });        
 
     }
