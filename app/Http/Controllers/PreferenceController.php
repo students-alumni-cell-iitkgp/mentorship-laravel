@@ -81,10 +81,20 @@ class PreferenceController extends Controller
 
                 ]);
                    $data = array();
+                   $menteeNo = array();
                    $data['mentorid'] = substr($prefs->pf1, -1);
+                   $Number = DB::table('mentors')->where('id', $data['mentorid'])->value('full');
+                   $max = DB::table('mentors')->where('id', $data['mentorid'])->value('mentee');
+                   if($Number >= $max)
+                   {
+                    Preference::where('menteerollno',$mentee[0]['roll'])->delete();
+                    return redirect('/givepreference');
+                   }
+                   $menteeNo['full'] = $Number + 1; 
                    DB::table('mentees')->where('email',auth()->user()->email)->update($data); 
+                   DB::table('mentors')->where('id', $data['mentorid'])->update($menteeNo); 
                    return redirect('/show');
-                   echo "<script type='text/javascript'>alert('Succesfully allotted your mentor ');</script>"; 
+                   echo "<script type='text/javascript'>alert('Succesfully allotted your mentor ');</script>";  
 
                }
                else

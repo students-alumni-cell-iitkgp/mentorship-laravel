@@ -162,12 +162,6 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="hcity" class="form-control" placeholder="Enter your hometown/Location of Summer Internship" required="required" maxlength="40">
-						</div>
-					</div>
-
 
 					<div class="form-group" >
 						<div class="col-sm-12" >
@@ -295,12 +289,12 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="fb" class="form-control" placeholder="Enter your Facebook Profile link" required="required">
+							<input type="text" name="fb" class="form-control" placeholder="Enter your Facebook Profile link" >
 						</div>
 					</div>										
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" required="required">
+							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" >
 						</div>
 					</div>
 

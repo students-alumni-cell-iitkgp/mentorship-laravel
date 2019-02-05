@@ -96,7 +96,7 @@
     <tbody>
       @foreach($mentors as $mentor)
 
-      @if ( $mentor['id'] < 9 && $mentor['full']==0) 
+      @if ( $mentor['id'] < 9 && $mentor['full']<$mentor['mentee']) 
 
       <tr>
 
@@ -124,7 +124,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] < 9 && $mentor['full']>0) 
+      @elseif ( $mentor['id'] < 9 && $mentor['full']>= $mentor['mentee']) 
 
       <tr style="background-color: red;">
 
@@ -152,7 +152,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']==0)
+      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']<= $mentor['mentee'])
 
       <tr>
 
@@ -181,7 +181,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']>0)
+      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']>= $mentor['mentee'])
 
       <tr style="background-color: red;">
 
@@ -210,7 +210,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] > 99 && $mentor['full']==0)
+      @elseif ( $mentor['id'] > 99 && $mentor['full']<= $mentor['mentee'])
 
       <tr>
 
@@ -239,7 +239,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] > 99 && $mentor['full']>0)
+      @elseif ( $mentor['id'] > 99 && $mentor['full']>= $mentor['mentee'])
 
       <tr style="background-color: red;">
 

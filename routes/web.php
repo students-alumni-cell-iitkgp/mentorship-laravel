@@ -39,7 +39,7 @@ Route::get('/gpreference','PreferenceController@create');
 
 Route::post('/gpreference','PreferenceController@store');
 
-Route::get('/','PreferenceCodeController@addcode');
+Route::get('/addcode','PreferenceCodeController@addcode');
 
 Route::get('/fpassword','PreferenceController@fp');
 

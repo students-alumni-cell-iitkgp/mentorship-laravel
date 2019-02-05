@@ -62,10 +62,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => $data['password'],
-        ]);
+        $user = DB::table('users')->where('email',$email)->first();
+        if (User::where('email', '=',$data['email'])->exists()) {
+            echo "<script type='text/javascript'>alert('User already exists!!!');</script>"; 
+        }
+        else{
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => $data['password'],
+            ]);
+        }
     }
 }
