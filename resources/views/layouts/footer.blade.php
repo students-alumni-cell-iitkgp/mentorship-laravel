@@ -3,7 +3,7 @@
 -->
 <hr>
 
-<h3 id="contact" style="margin-left: 200px">
+<h3 id="contact" style="text-align: center">
     Contact Us
 </h3>
 
@@ -26,22 +26,19 @@
 <br>
 
 <div class="row">
-    <div class="col-md-3" style="font:bold 15px Calibri; text-align:center">
-        Bharat Chandra<br>imbharat16@gmail.com <br>+91-9932544235
+    <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
+        Gautam Arya<br>gautam25arya@gmail.com <br>+91-8349702291
     </div>
 
 
-    <div class="col-md-3" style="font:bold 15px Calibri; text-align:center">
-        Vishal Kumar Singh <br>vishalsingh08.iitkgp@gmail.com
-        <br>+91-8769797343
+    <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
+        Vasanta Majety <br>vasantamajety@gmail.com
+        <br>+91-7477745444
     </div>
-    <div class="col-md-3" style="font:bold 15px Calibri; text-align:center">
-        Daksh Thakkur <br>daksh.thakkur@gmail.com<br>+91-9460300246
+    <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
+        Naman Agrawal <br>agarwalnaman20@gmail.com<br>+91-7478077999
     </div>
 
-    <div class="col-md-3" style="position:relative;font:bold 15px Calibri; text-align:center">
-        Anmol Thakkar<br>anmolbt@gmail.com  <br>+91-9475240720
-    </div>
 </div>
 <br>
 <footer style="background-color:black; color:white; text-align:center; padding:10px; position:relative; bottom:0px; width:100%">&copy; Students' Alumni Cell, IIT Kharagpur

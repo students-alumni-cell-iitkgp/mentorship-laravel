@@ -29,16 +29,16 @@
 						For mentor : mentor.registration
 						For mentee : mentee.registration
 					-->
-					<div  class="col-md-3 col-xs-12 col-sm-6" align="center" >
-						<a href="/mentor_registration" style="outline: none;">
-							<img class="card" src="img/mentor.png" alt="Mentor Registration" style="width:300px;margin-top: 2em">
+					<div  class="col-md-3 col-xs-12 col-sm-6" align="center" style="margin-top: 3em">
+						<a href="#" style="outline: none;">
+							<img class="card" src="{{ asset('img/mentor.png') }}" alt="Mentor Registration" style="width:300px">
 
 						</a> 
 					</div>
 
-					<div class="col-md-3 col-xs-12 col-sm-6" align="center" style="border-right: 1px solid lightgrey;margin-top: 2em;">
-						<a href="/mentee_registration" style="outline: none;">
-							<img class="card"  src="img/ente.png" alt="Mentee Registration" style="max-width:300px;">
+					<div class="col-md-3 col-xs-12 col-sm-6" align="center" style="border-right: 1px solid lightgrey; margin-top: 3em">
+						<a href="#" style="outline: none;">
+							<img class="card"  src="{{ asset('img/ente.png') }}" alt="Mentee Registration" style="max-width:300px;">
 
 						</a> 
 					</div>
@@ -53,7 +53,7 @@
 						The form redirects to show.blade.php which is the dashboard for profile containiny its layouts in resources/view/profile directory
 						Action of the form uses ProfileController with post menthod calling store function
 					-->
-					<form action="/show" class="form-horizontal" method="post" role="form" accept-charset="utf-8">
+					<form action="{{ url('/show') }}" class="form-horizontal" method="post" role="form" accept-charset="utf-8">
 						{{ csrf_field() }}
 						<div class="col-md-6 col-sm-6 col-xs-6" align="center">
 
@@ -70,14 +70,14 @@
 						<br>
 						<hr>
 						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-							<button  style="background-color: #2f4c73" type="submit" class="btn">
+							<button  style="background-color: #2f4c73" type="submit" class="btn" disabled>
 								Log In
 							</button>
 						</div>
 
 
 						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-						<a href="/fpassword"  class="btn btn-danger">
+						<a href="{{ url('/fpassword') }}"  class="btn btn-danger" disabled>
 						
 								Forgot Password
 						
@@ -132,6 +132,6 @@
 
 	</div>
 </div>
-@include('layouts.testimonials')
+
 
 @endsection('contents')

@@ -21,10 +21,7 @@ class CreatePreferencesTable extends Migration
             $table->text('mentee_email');
             $table->text('mentee_contactno');
             $table->text('pf1');
-            $table->text('pf2');
-            $table->text('pf3');
-            $table->text('pf4');
-            $table->text('pf5');
+            
         });
     }
 

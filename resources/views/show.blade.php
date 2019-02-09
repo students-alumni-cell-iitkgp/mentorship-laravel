@@ -65,7 +65,6 @@
     <li class="active"><a href="#home">Home</a></li>
    <!-- <li><a href="#menu1">Guidelines</a></li> -->
     <li><a href="#menu2">Give Preferences</a></li>
-    <li><a href="#menu3">Your Preferences</a></li>
     @else()
     <li class="active"><a href="#menu4">My Mentor</a></li>
    
@@ -128,90 +127,7 @@
 
     </div>
 
-    <div id="menu3" class="tab-pane fade" style="overflow: auto ;">
-    <br>
-    <br>
-
-@if(App\Preference::where('mentee_email',Auth::user()->email)->count()==1)
-
-
-
-<?php $preferences= App\Preference::where('mentee_email',Auth::user()->email)->get() ;?>
-
-
-
-<?php $yourpreferences1 = App\Mentor::find(substr($preferences[0]['pf1'],-3)) ;?>
-<?php $yourpreferences2 = App\Mentor::find(substr($preferences[0]['pf2'],-3)) ;?>
-<?php $yourpreferences3 = App\Mentor::find(substr($preferences[0]['pf3'],-3)) ;?>
-<?php $yourpreferences4 = App\Mentor::find(substr($preferences[0]['pf4'],-3)) ;?>
-<?php $yourpreferences5 = App\Mentor::find(substr($preferences[0]['pf5'],-3)) ;?>
-
-
-        	<div  align="center" >
-        	<p>You have given the following preferences-</p>
-        	    </div>
-
-<br>
- <table>
-  <tr>
-        <th>ID</th>
-        <th>Area of Expertise</th>
-        <th>Department</th>
-
-        <th>Current City</th>
-        <th>Firm</th>
-  </tr>
-  <tr>
-    <td>{{$preferences[0]['pf1']}}</td>
-    <td>{{$yourpreferences1['foe']}}</td>
-    <td>{{$yourpreferences1['department']}}</td>
-
-    <td>{{$yourpreferences1['ccity']}}</td>
-    <td>{{$yourpreferences1['firm']}}</td>
-  </tr>
-    <tr>
-    <td>{{$preferences[0]['pf2']}}</td>
-    <td>{{$yourpreferences2['foe']}}</td>
-    <td>{{$yourpreferences2['department']}}</td>
-
-    <td>{{$yourpreferences2['ccity']}}</td>
-    <td>{{$yourpreferences2['firm']}}</td>
-  </tr>
-    <tr>
-    <td>{{$preferences[0]['pf3']}}</td>
-    <td>{{$yourpreferences3['foe']}}</td>
-    <td>{{$yourpreferences3['department']}}</td>
-
-    <td>{{$yourpreferences3['ccity']}}</td>
-    <td>{{$yourpreferences3['firm']}}</td>
-  </tr>
-    <tr>
-    <td>{{$preferences[0]['pf4']}}</td>
-    <td>{{$yourpreferences4['foe']}}</td>
-    <td>{{$yourpreferences4['department']}}</td>
-    <td>{{$yourpreferences4['ccity']}}</td>
-    <td>{{$yourpreferences4['firm']}}</td>
-  </tr>
-    <tr>
-    <td>{{$preferences[0]['pf5']}}</td>
-    <td>{{$yourpreferences5['foe']}}</td>
-    <td>{{$yourpreferences5['department']}}</td>
-
-    <td>{{$yourpreferences5['ccity']}}</td>
-    <td>{{$yourpreferences5['firm']}}</td>
-  </tr>      
-
-</table>       	    
-
-@else()
-	        	<div  align="center" >
-        	<p>You have not given any Mentor preferences till now. Please fill in your preferences by navigating to "Give Preferences" tab.</p>
-        	    </div>
-
-
-@endif
-
-    </div>
+    
 
 
         @else()

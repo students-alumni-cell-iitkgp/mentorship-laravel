@@ -275,7 +275,7 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="fb" class="form-control" placeholder="Enter Your Facebook Link" required="required" value="{{ old('fb') }}">
+							<input type="text" name="fb" class="form-control" placeholder="Enter Your Facebook Link" value="{{ old('fb') }}">
 
 						</div>
 					</div>
@@ -283,7 +283,7 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="linkedin" class="form-control" placeholder="Enter Your Linkedin Link" required="required" value="{{ old('linkedin') }}">
+							<input type="text" name="linkedin" class="form-control" placeholder="Enter Your Linkedin Link" value="{{ old('linkedin') }}">
 
 						</div>
 					</div>

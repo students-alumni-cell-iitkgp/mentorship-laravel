@@ -14,15 +14,15 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="img/ALUMNS KA-2.jpg" alt="">
+				<img src="{{ asset('img/ALUMNS KA-2.jpg') }}" alt="">
 			</div>
 
 			<div class="item">
-				<img src="img/SampWebsite.JPG" alt="">
+				<img src="{{ asset('img/SampWebsite.JPG') }}" alt="">
 			</div>
 
 			<div class="item">
-				<img src="img/slider3.jpg" alt="">
+				<img src="{{ asset('img/slider3.jpg') }}" alt="">
 			</div>
 		</div>
 

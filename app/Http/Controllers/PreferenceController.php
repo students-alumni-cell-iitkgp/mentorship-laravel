@@ -71,23 +71,30 @@ class PreferenceController extends Controller
 
 
                    
-                   Preference::create([
+                   $prefs=Preference::create([
 
                     'menteerollno' =>$mentee[0]['roll'],  
                     'menteename' => Auth::user()->name,
                     'mentee_email' => $mentee[0]['email'],
                     'mentee_contactno' =>$mentee[0]['phone'],
-                    'pf1' => request('pf1'),
-                    'pf2' => request('pf2'),
-                    'pf3' => request('pf3'),
-                    'pf4' => request('pf4'),
-                    'pf5' => request('pf5')
+                    'pf1' => request('pf1')
 
                 ]);
-
-
-                   return redirect('/givepreference');
-                   echo "<script type='text/javascript'>alert('Succesfully sent your Preferences ');</script>"; 
+                   $data = array();
+                   $menteeNo = array();
+                   $data['mentorid'] = substr($prefs->pf1, -1);
+                   $Number = DB::table('mentors')->where('id', $data['mentorid'])->value('full');
+                   $max = DB::table('mentors')->where('id', $data['mentorid'])->value('mentee');
+                   if($Number >= $max)
+                   {
+                    Preference::where('menteerollno',$mentee[0]['roll'])->delete();
+                    return redirect('/givepreference');
+                   }
+                   $menteeNo['full'] = $Number + 1; 
+                   DB::table('mentees')->where('email',auth()->user()->email)->update($data); 
+                   DB::table('mentors')->where('id', $data['mentorid'])->update($menteeNo); 
+                   return redirect('/show');
+                   echo "<script type='text/javascript'>alert('Succesfully allotted your mentor ');</script>";  
 
                }
                else
