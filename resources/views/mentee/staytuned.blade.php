@@ -21,7 +21,7 @@
 <h3><i>Student Registration will be starting soon! Stay tuned.</i></h3>
 </div>
 					<div class="modal-footer">
-				<a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+				<a href="{{url('/')}}" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
 			</div>
 		</div>
 	</div>

@@ -43,7 +43,7 @@
            <?php 
            if (Auth::check()) {
             ?>          
-              <a href="{{ url('/logout') }}">
+              <a href="{{ url('../logout') }}">
             
             <button  style="margin-right: 5px;"  name="logout" class="btn btn-danger navbar-btn navbar-right" > Logout</button>
             </a>

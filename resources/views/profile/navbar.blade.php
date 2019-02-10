@@ -37,7 +37,7 @@
        <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="93" src="img/samp_logo.png" alt=""></a>
    </div>
    <div id="nav_pc" style="margin-top: 1.4em" class="collapse navbar-collapse">
-              <a href="/logout">
+              <a href="{{url('/logout')}}">
             
             <button  style="margin-right: 5px;"  name="logout" class="btn btn-danger navbar-btn navbar-right" > Logout</button>
             </a>

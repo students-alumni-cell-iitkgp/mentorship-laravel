@@ -11,7 +11,7 @@
 			<br>
 
 			<div style="">
-				<img src="../img/user.png" class="img img-rounded" style="position:relative;left:20px;" width="200" height="180"><br><br>
+				<img src="{{ asset('img/user.png') }}" class="img img-rounded" style="position:relative;left:20px;" width="200" height="180"><br><br>
 				<div class="list-group">
 					<ul class="list-group">
 						<li class="list-group-item"><strong>Email</strong><span class="pull-right">{{ $details ->email }}</span>
@@ -119,10 +119,10 @@
 <br>
 <br>
     	<div  align="center" >
-              <a href="/givepreference">
+             
             
-            <button   name="givepreference" class="btn btn-success " > View Mentors Profile</button>
-            </a>
+            <button   name="givepreference" class="btn btn-success " disabled> View Mentors Profile</button>
+            
             </div>
 
     </div>

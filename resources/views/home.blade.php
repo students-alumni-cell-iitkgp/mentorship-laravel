@@ -30,14 +30,14 @@
 						For mentee : mentee.registration
 					-->
 					<div  class="col-md-3 col-xs-12 col-sm-6" align="center" style="margin-top: 3em">
-						<a href="#" style="outline: none;">
+						<a href="{{ url('/mentor_registration') }}" style="outline: none;">
 							<img class="card" src="{{ asset('img/mentor.png') }}" alt="Mentor Registration" style="width:300px">
 
 						</a> 
 					</div>
 
 					<div class="col-md-3 col-xs-12 col-sm-6" align="center" style="border-right: 1px solid lightgrey; margin-top: 3em">
-						<a href="#" style="outline: none;">
+						<a href="{{ url('/mentee_registration') }}" style="outline: none;">
 							<img class="card"  src="{{ asset('img/ente.png') }}" alt="Mentee Registration" style="max-width:300px;">
 
 						</a> 
@@ -70,14 +70,14 @@
 						<br>
 						<hr>
 						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-							<button  style="background-color: #2f4c73" type="submit" class="btn" disabled>
+							<button  style="background-color: #2f4c73" type="submit" class="btn">
 								Log In
 							</button>
 						</div>
 
 
 						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-						<a href="{{ url('/fpassword') }}"  class="btn btn-danger" disabled>
+						<a href="{{ url('/fpassword') }}"  class="btn btn-danger">
 						
 								Forgot Password
 						

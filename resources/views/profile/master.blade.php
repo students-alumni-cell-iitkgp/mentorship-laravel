@@ -15,12 +15,12 @@
 
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<!-- Generic page styles -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<style type="text/css">
 	::selection { background-color: #E13300; color: white; }
 	::-moz-selection { background-color: #E13300; color: white; }
 	body {
-		background-image: url('../img/bg.jpg');
+		background-image: url('img/bg.jpg');
 	}
 
 
