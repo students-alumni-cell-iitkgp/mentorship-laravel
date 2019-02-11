@@ -16,14 +16,14 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<a href="/">
+				<a href="{{url('/')}}">
 					<button type="button" class="close">&times;</button>
 				</a>
 				<h4 class="modal-title" style="text-align:center;">Register  Here</h4>
 			</div>
 			<div class="modal-body">
 				
-				<form class="form-horizontal" method="post" action="/mentor_registration">
+				<form class="form-horizontal" method="post" action="{{ url('/mentor_registration') }}">
 					{{ csrf_field() }}
 
 					<div class="form-group">
@@ -326,7 +326,7 @@
 			</div>
 
 			<div class="modal-footer">
-				<a href="/" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+				<a href="{{url('/')}}" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
 			</div>
 		</div>
 	</div>

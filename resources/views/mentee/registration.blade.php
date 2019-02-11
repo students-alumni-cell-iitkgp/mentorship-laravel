@@ -14,13 +14,13 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<a href="/">
+				<a href="{{url('/')}}">
 					<button type="button" class="close">&times;</button>
 				</a>
 				<h4 class="modal-title" style="text-align:center;">Register  Here</h4>
 			</div>
 			<div class="modal-body">				
-				<form class="form-horizontal" method="post" action="/mentee_registration">
+				<form class="form-horizontal" method="post" action="{{url('/mentee_registration')}}">
 					{{ csrf_field() }}
 
 					<div class="form-group">
@@ -162,6 +162,11 @@
 						</div>
 					</div>
 
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" name="hcity" class="form-control" placeholder="Enter your hometown/Location of Summer Internship" required="required" maxlength="40">
+						</div>
+</div>
 
 					<div class="form-group" >
 						<div class="col-sm-12" >
