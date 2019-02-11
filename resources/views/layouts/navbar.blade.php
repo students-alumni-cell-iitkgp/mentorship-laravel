@@ -28,7 +28,7 @@
 <div style="background-color: white;height: 90px;border-color:#2f4c73;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
    <div class="navbar-header">
-       <button style="display: none" type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
+       <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="navbar-collapse">
            <span class="sr-only">Toggle navigation</span>
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
@@ -55,7 +55,6 @@
        <ul style=" margin-right: 10px"  class="nav navbar-nav navbar-right ">
 
            <li class="nav_list"><a href="{{ url('/') }}">Home</a></li>
-           <li class="nav_list"><a href="{{ url('/#testimonials') }}">Testimonials</a></li>
            <li class="nav_list"><a href="{{ url('/faq') }}" >FAQs</a></li>
            <li class="nav_list"><a href="{{ url('/icebreaker') }}">Icebreaker</a></li>
            <li class="nav_list"><a href="{{ url('#contact') }}">Contact us</a></li>
