@@ -294,12 +294,12 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="fb" class="form-control" placeholder="Enter your Facebook Profile link" >
+							<input type="text" name="fb" class="form-control" placeholder="Enter your Facebook Profile link" required="required">
 						</div>
 					</div>										
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" >
+							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" required="required">
 						</div>
 					</div>
 

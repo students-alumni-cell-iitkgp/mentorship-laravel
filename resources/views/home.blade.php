@@ -13,7 +13,10 @@
 </style>
 @extends('layouts.master')
 <br><br><br><br>
-@include('layouts.carousel')
+<div class="cover">
+	<img src="{{ asset('img/cover1.jpg') }}" width="100%"> 
+</div><br><br>
+<marquee bgcolor="#2f4c73" height="50" style="color: white;font-size: 20;padding: 10" scrollamount="6"><b>Mentor Registrations are open now!</b></marquee>
 @section('contents')
 
 <div class="container-fluid">
@@ -37,7 +40,7 @@
 					</div>
 
 					<div class="col-md-3 col-xs-12 col-sm-6" align="center" style="border-right: 1px solid lightgrey; margin-top: 3em">
-						<a href="{{ url('/mentee_registration') }}" style="outline: none;">
+						<a href="#" style="outline: none;">
 							<img class="card"  src="{{ asset('img/ente.png') }}" alt="Mentee Registration" style="max-width:300px;">
 
 						</a> 
@@ -70,14 +73,14 @@
 						<br>
 						<hr>
 						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-							<button  style="background-color: #2f4c73" type="submit" class="btn">
+							<button  style="background-color: #2f4c73;color: white" type="submit" class="btn">
 								Log In
 							</button>
 						</div>
 
 
 						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-						<a href="{{ url('/fpassword') }}"  class="btn btn-danger">
+						<a href="#"  class="btn btn-danger">
 						
 								Forgot Password
 						

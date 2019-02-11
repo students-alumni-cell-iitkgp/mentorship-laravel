@@ -27,6 +27,9 @@
 
 <div class="row">
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
+        Naman Agrawal <br>agarwalnaman20@gmail.com<br>+91-7478077999
+    </div>
+    <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
         Gautam Arya<br>gautam25arya@gmail.com <br>+91-8349702291
     </div>
 
@@ -35,9 +38,7 @@
         Vasanta Majety <br>vasantamajety@gmail.com
         <br>+91-7477745444
     </div>
-    <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Naman Agrawal <br>agarwalnaman20@gmail.com<br>+91-7478077999
-    </div>
+    
 
 </div>
 <br>
