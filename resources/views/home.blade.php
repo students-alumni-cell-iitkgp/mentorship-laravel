@@ -9,13 +9,15 @@
 	.card:hover{
 		box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
 	}
+	body{overflow-x: hidden;}
 
 </style>
 @extends('layouts.master')
 <br><br><br><br>
-<div class="cover">
+@include('layouts.carousel')
+<!-- <div class="cover">
 	<img src="{{ asset('img/cover1.jpg') }}" width="100%"> 
-</div><br><br>
+</div><br><br> -->
 <marquee bgcolor="#2f4c73" height="50" style="color: white;font-size: 20;padding: 10" scrollamount="6"><b>Mentor Registrations are open now!</b></marquee>
 @section('contents')
 
@@ -72,10 +74,17 @@
 						</div>
 						<br>
 						<hr>
-						<div class="col-md-2" style="padding-top: -5px;margin-top: 1px;">
-							<button  style="background-color: #2f4c73;color: white" type="submit" class="btn">
-								Log In
-							</button>
+						<div class="col-md-12" style="padding-top: -5px;">
+						
+							<div  class="col-md-3 col-xs-12 col-sm-6" align="center">
+								<button  style="background-color: #2f4c73;color: white;float: left;" type="submit" class="btn">
+									Log In
+									</button>
+							</div>
+
+							<!-- <div class="col-md-4 col-xs-12 col-sm-6" style="float: right;margin-top: 10px;" >
+								<span><a href="{{ url('/fpassword') }}" style="outline: none;">Forgot Password?</a></span>
+							</div> -->
 						</div>
 
 

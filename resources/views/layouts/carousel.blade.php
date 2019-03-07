@@ -12,17 +12,17 @@
 		</ol>
 
 		<!-- Wrapper for slides -->
-		<div class="carousel-inner">
+		<div class="carousel-inner" style="margin-top:10px;">
 			<div class="item active">
-				<img src="{{ asset('img/ALUMNS KA-2.jpg') }}" alt="">
+				<img src="{{ asset('img/cover1.jpg') }}" alt="Info">
 			</div>
 
 			<div class="item">
-				<img src="{{ asset('img/SampWebsite.JPG') }}" alt="">
+				<img src="{{ asset('img/alumnireg.jpg') }}" alt="Alumni Registration">
 			</div>
 
 			<div class="item">
-				<img src="{{ asset('img/slider3.jpg') }}" alt="">
+				<img src="{{ asset('img/studentreg.jpg') }}" alt="Student Registration">
 			</div>
 		</div>
 
