@@ -130,7 +130,7 @@
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="cgpa" class="form-control" placeholder="Enter your CGPA" required="required">
+							<input type="text" name="cgpa" class="form-control" placeholder="Enter your CGPA" >
 						</div>
 					</div>
 
@@ -299,7 +299,7 @@
 					</div>										
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" required="required">
+							<input type="text" name="linkedin" class="form-control" placeholder="Enter your LinkedIn Profile link" >
 						</div>
 					</div>
 

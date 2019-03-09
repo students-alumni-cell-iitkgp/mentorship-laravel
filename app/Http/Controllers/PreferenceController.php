@@ -127,6 +127,8 @@ class PreferenceController extends Controller
         DB::table('mentors')->where('email',$request->email)->update($data); 
         DB::table('users')->where('email',$request->email)->update($data);    
 
-        return redirect('/');
+        // return redirect('/');
+        return redirect('/')->with('message', 'Password succesfully changed!');
+
         }
     }
