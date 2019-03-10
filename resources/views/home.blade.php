@@ -18,7 +18,11 @@
 <!-- <div class="cover">
 	<img src="{{ asset('img/cover1.jpg') }}" width="100%"> 
 </div><br><br> -->
-<marquee bgcolor="#2f4c73" height="50" style="color: white;font-size: 20;padding: 10" scrollamount="6"><b>Mentor Registrations are open now!</b></marquee>
+<marquee bgcolor="#2f4c73" behavior="scroll" direction="left" height="50" style="color: white;font-size: 20;padding: 10" scrollamount="6">
+	<b>Mentor Registrations are now open!</b>
+	<b style="padding-left: 50%;">Mentee Registrations are now open!</b>
+</marquee>	
+
 @section('contents')
 
 <div class="container-fluid">
@@ -58,6 +62,11 @@
 						The form redirects to show.blade.php which is the dashboard for profile containiny its layouts in resources/view/profile directory
 						Action of the form uses ProfileController with post menthod calling store function
 					-->
+					@if(session()->has('message'))
+					    <div class="alert alert-success">
+					        {{ session()->get('message') }}
+					    </div>
+					@endif
 					<form action="{{ url('/show') }}" class="form-horizontal" method="post" role="form" accept-charset="utf-8">
 						{{ csrf_field() }}
 						<div class="col-md-6 col-sm-6 col-xs-6" align="center">
@@ -82,9 +91,9 @@
 									</button>
 							</div>
 
-							<!-- <div class="col-md-4 col-xs-12 col-sm-6" style="float: right;margin-top: 10px;" >
-								<span><a href="{{ url('/fpassword') }}" style="outline: none;">Forgot Password?</a></span>
-							</div> -->
+							<div class="col-md-4 col-xs-12 col-sm-6" style="float: right;margin-top: 10px;" >
+								<span><a href="{{ route('password.request') }}" style="outline: none;">Forgot Password?</a></span>
+							</div>
 						</div>
 
 

@@ -17,6 +17,13 @@ Route::get('/show','ProfileController@show')->name('home');// opens the profile 
 Route::post('/show','ProfileController@store');// authenticate the user and loggin the user
 Route::get('/logout','ProfileController@destroy');//log out the user
 
+/*password Resed */
+Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('/password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+Route::get('/password/reset/{token?}','Auth\ResetPasswordController@showResetForm')->name('password.reset');
+/*
+
 /*
 	redirect to faq.blade.php
 */
