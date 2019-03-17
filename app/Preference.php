@@ -8,7 +8,7 @@ class Preference extends Model
 {
 
 	   protected $fillable = [
-   	'menteerollno','menteename','mentee_email','mentee_contactno','pf1'
+   	'menteerollno','menteename','mentee_email','mentee_contactno','pf1','pf2','pf3'
 
    ];
 }

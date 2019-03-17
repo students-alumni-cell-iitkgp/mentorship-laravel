@@ -1,63 +1,63 @@
 @extends('profile.master')
 @section('content')
 <div class="container">
-	<div class="row">
+  <div class="row">
 
-		<div class="col-md-3">
-
-
-
-			<br>
-			<br>
-
-			<div style="">
-				<img src="{{ asset('img/user.png') }}" class="img img-rounded" style="position:relative;left:20px;" width="200" height="180"><br><br>
-				<div class="list-group">
-					<ul class="list-group">
-						<li class="list-group-item"><strong>Email</strong><span class="pull-right">{{ $details ->email }}</span>
-						</li>
-						@if($details->roll !='')
-						<li class="list-group-item"><strong>Roll Number </strong><span class="pull-right">{{ $details ->roll }}</span>
-						</li>
-						@endif
-						@if($details->phone !='')
-						<li class="list-group-item"><strong>Phone Number </strong><span class="pull-right">{{ $details ->phone }}</span>
-						</li>
-						@endif
-						@if($details->pout !='')
-						<li class="list-group-item"><strong>Year of Graduation</strong><span class="pull-right">{{ $details ->pout }}</span>
-						</li>
-						@endif
-						<li class="list-group-item"><strong>Department  </strong><span class="pull-right">{{ $details ->department }}</span>
-						</li>
-						@if($details->hall!='')
-						<li class="list-group-item"><strong>Hall </strong><span class="pull-right">{{ $details->hall }}</span></li>
-						@endif
-					</ul>		
-				</div>
-			</div>
-		</div><!--col-md-3 ends -->
-
-		<div class="col-md-7">
-			<br>
-
-			<div style="margin:30px 0px 5px 0px" class="well">
-				<h3>
-					Welcome to the Student-Alumni Mentorship Programme!
-				</h3>
+    <div class="col-md-3">
 
 
-				<h4>
-		
-				@if ( auth()->user()->type=='mentor')
 
-				Thank you for registering! We will allot a mentee to you soon.
-				@endif
-				</h4>
+      <br>
+      <br>
 
-				<h4>
-				@if( auth()->user()->type=='mentee')
-				
+      <div style="">
+        <img src="{{ asset('img/user.png') }}" class="img img-rounded" style="position:relative;left:20px;" width="200" height="180"><br><br>
+        <div class="list-group">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Email</strong><span class="pull-right">{{ $details ->email }}</span>
+            </li>
+            @if($details->roll !='')
+            <li class="list-group-item"><strong>Roll Number </strong><span class="pull-right">{{ $details ->roll }}</span>
+            </li>
+            @endif
+            @if($details->phone !='')
+            <li class="list-group-item"><strong>Phone Number </strong><span class="pull-right">{{ $details ->phone }}</span>
+            </li>
+            @endif
+            @if($details->pout !='')
+            <li class="list-group-item"><strong>Year of Graduation</strong><span class="pull-right">{{ $details ->pout }}</span>
+            </li>
+            @endif
+            <li class="list-group-item"><strong>Department  </strong><span class="pull-right">{{ $details ->department }}</span>
+            </li>
+            @if($details->hall!='')
+            <li class="list-group-item"><strong>Hall </strong><span class="pull-right">{{ $details->hall }}</span></li>
+            @endif
+          </ul>   
+        </div>
+      </div>
+    </div><!--col-md-3 ends -->
+
+    <div class="col-md-7">
+      <br>
+
+      <div style="margin:30px 0px 5px 0px" class="well">
+        <h3>
+          Welcome to the Student-Alumni Mentorship Programme!
+        </h3>
+
+
+        <h4>
+    
+        @if ( auth()->user()->type=='mentor')
+
+        Thank you for registering! We will allot a mentee to you soon.
+        @endif
+        </h4>
+
+        <h4>
+        @if( auth()->user()->type=='mentee')
+        
 
   <ul class="nav nav-tabs">
   <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
@@ -118,12 +118,11 @@
     <div id="menu2" class="tab-pane fade">
 <br>
 <br>
-    	<div  align="center" >
+      <div  align="center" >
              
-            
+            <a href="{{ url('/givepreference') }}">
             <button   name="givepreference" class="btn btn-success " disabled> View Mentors Profile</button>
             <br><br>
-            <span style="color:red">Mentor preferences will start soon!</span>
             
             </div>
 
@@ -213,16 +212,16 @@ $(document).ready(function(){
     });
 });
 </script>
-				
-				@endif
-				</h4>
+        
+        @endif
+        </h4>
 
-			</div>
-		</div>
-		<div class="col-md-2">
+      </div>
+    </div>
+    <div class="col-md-2">
 
-		</div>
-	</div>
+    </div>
+  </div>
 
 </div>
 @endsection('content')

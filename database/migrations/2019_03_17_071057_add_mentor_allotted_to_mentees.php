@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddMentoridToMentees extends Migration
+class AddMentorAllottedToMentees extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,8 @@ class AddMentoridToMentees extends Migration
     {
          Schema::table('mentees', function (Blueprint $table) {
             
-            $table->integer('mentorid')->default('0');
-        });        
-
+            $table->integer('mentor_allotted')->default('0');
+        });
     }
 
     /**
@@ -27,8 +26,8 @@ class AddMentoridToMentees extends Migration
      */
     public function down()
     {
-        Schema::table('mentees', function($table) {
-            $table->dropColumn('mentorid');
+       Schema::table('mentees', function($table) {
+            $table->dropColumn('mentor_allotted');
         });
     }
 }

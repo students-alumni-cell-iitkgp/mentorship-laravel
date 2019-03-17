@@ -59,7 +59,9 @@ class MenteeController extends Controller
 			'phone' => request('phone'),			
 			'fb'=>request('fb'),
 			'linkedin'=>request('linkedin'),
-			'mentorid' => '0'
+			'mentorid' => '0',
+			'mentor_allotted' => '0'
+
 
 
 		]);
