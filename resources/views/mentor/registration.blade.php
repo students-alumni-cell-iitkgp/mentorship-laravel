@@ -113,12 +113,7 @@
 						</div>
 					</div>
 					
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="ccity" class="form-control" placeholder="Enter Your Current City" required="required" maxlength="40" value="{{ old('ccity') }}">
-
-						</div>
-					</div>						
+									
 
 					<div class="form-group">
 						<div class="col-sm-3">
@@ -273,20 +268,7 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="fb" class="form-control" placeholder="Enter Your Facebook Link" value="{{ old('fb') }}" required="required">
-
-						</div>
-					</div>
-
-
-					<div class="form-group">
-						<div class="col-sm-12">
-							<input type="text" name="linkedin" class="form-control" placeholder="Enter Your Linkedin Link" value="{{ old('linkedin') }}" required="required">
-
-						</div>
-					</div>
+					
 
 
 					<div class="form-group">

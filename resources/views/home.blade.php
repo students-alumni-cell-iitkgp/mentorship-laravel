@@ -19,8 +19,7 @@
 	<img src="{{ asset('img/cover1.jpg') }}" width="100%"> 
 </div><br><br> -->
 <marquee bgcolor="#2f4c73" behavior="scroll" direction="left" height="50" style="color: white;font-size: 20;padding: 10" scrollamount="6">
-	<b>Mentor Registrations are now open!</b>
-	<b style="padding-left: 50%;">Mentee Registrations are now open!</b>
+	<b>Mentee Registrations are now open!</b>
 </marquee>	
 
 @section('contents')

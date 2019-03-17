@@ -34,7 +34,7 @@ class PreferenceController extends Controller
 
             } 
             else 
-                return redirect('/');  	
+                return redirect('/');   
         }
 
         Public function create()
@@ -77,14 +77,16 @@ class PreferenceController extends Controller
                     'menteename' => Auth::user()->name,
                     'mentee_email' => $mentee[0]['email'],
                     'mentee_contactno' =>$mentee[0]['phone'],
-                    'pf1' => request('pf1')
+                    'pf1' => request('pf1'),
+                    'pf2' => request('pf2'),
+                    'pf3' => request('pf3')
 
                 ]);
                    $data = array();
                    $menteeNo = array();
-                   $data['mentorid'] = substr($prefs->pf1, -1);
-                   $Number = DB::table('mentors')->where('id', $data['mentorid'])->value('full');
-                   $max = DB::table('mentors')->where('id', $data['mentorid'])->value('mentee');
+                   $data['mentor_allotted'] = substr($prefs->pf1, -1);
+                   $Number = DB::table('mentors')->where('id', $data['mentor_allotted'])->value('full');
+                   $max = DB::table('mentors')->where('id', $data['mentor_allotted'])->value('mentee');
                    if($Number >= $max)
                    {
                     Preference::where('menteerollno',$mentee[0]['roll'])->delete();
@@ -92,7 +94,7 @@ class PreferenceController extends Controller
                    }
                    $menteeNo['full'] = $Number + 1; 
                    DB::table('mentees')->where('email',auth()->user()->email)->update($data); 
-                   DB::table('mentors')->where('id', $data['mentorid'])->update($menteeNo); 
+                   DB::table('mentors')->where('id', $data['mentor_allotted'])->update($menteeNo); 
                    return redirect('/show');
                    echo "<script type='text/javascript'>alert('Succesfully allotted your mentor ');</script>";  
 

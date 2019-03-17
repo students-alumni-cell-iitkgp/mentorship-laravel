@@ -100,7 +100,7 @@
 
       <tr>
 
-        <td>18MP00{{$mentor['id']}}</td> 
+        <td>19MP00{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
@@ -128,7 +128,7 @@
 
       <tr style="background-color: red;">
 
-        <td>18MP00{{$mentor['id']}}</td> 
+        <td>19MP00{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
@@ -156,7 +156,7 @@
 
       <tr>
 
-        <td>18MP0{{$mentor['id']}}</td> 
+        <td>19MP0{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor->pref1)->codename}}</td>
@@ -185,7 +185,7 @@
 
       <tr style="background-color: red;">
 
-        <td>18MP0{{$mentor['id']}}</td> 
+        <td>19MP0{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor->pref1)->codename}}</td>
@@ -214,7 +214,7 @@
 
       <tr>
 
-        <td>18MP{{$mentor['id']}}</td> 
+        <td>19MP{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
@@ -243,7 +243,7 @@
 
       <tr style="background-color: red;">
 
-        <td>18MP{{$mentor['id']}}</td> 
+        <td>19MP{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
@@ -276,16 +276,17 @@
   
   @if( App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
   <div  align="center" >
-    <a href="/gpreference">
+        <span style="color: red"><b>You have already submitted your preferences!</b></span>
+        <br>
+
 
       <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
-    </a>
   </div>
 
   
   @else 
   <div  align="center" >
-    <a href="/gpreference" target="_blank">
+    <a href="{{ url('/gpreference') }}">
 
       <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
     </a>
