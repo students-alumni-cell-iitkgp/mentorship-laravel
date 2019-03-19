@@ -119,8 +119,8 @@
 <br>
 <br>
       <div  align="center" >
-             
-            <a href="{{ url('/givepreference') }}">
+            <span style="color: red"><b>The preference portal is closed due to technical issues. Sorry for the inconvenience caused.</b></span> <br><br>
+            <a href="#">
             <button   name="givepreference" class="btn btn-success " disabled> View Mentors Profile</button>
             <br><br>
             
