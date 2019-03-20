@@ -56,7 +56,6 @@
 
            <li class="nav_list"><a href="{{ url('/') }}">Home</a></li>
            <li class="nav_list"><a href="{{ url('/faq') }}" >FAQs</a></li>
-           <li class="nav_list"><a href="{{ url('/icebreaker') }}">Icebreaker</a></li>
            <li class="nav_list"><a href="{{ url('#contact') }}">Contact us</a></li>
 
 
