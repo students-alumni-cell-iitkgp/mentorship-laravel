@@ -18,21 +18,26 @@
 			</div>
 			<div class="modal-body">
 
+				<h5 style="color: red"><center>**Please enter the exact Mentor codes as preferences. For example to enter the preference of a mentor with id '19MPXXX', enter '19MPXXX' in the input box.</center></h4>
 
 				<form class="form-horizontal" method="post" action="{{ url('/gpreference') }}">
 					{{ csrf_field() }}
 
-					<h4>Preference</h4>
+					<h4>Preference 1</h4>
 					<div class="form-group">
 						<div class="col-sm-12">
 							<input type="text" name="pf1" class="form-control" placeholder="Preference 1 ID" minlength="7" maxlength="7" required="required">
 						</div>
 					</div>
+					<h4>Preference 2</h4>
+
 					<div class="form-group">
 						<div class="col-sm-12">
 							<input type="text" name="pf2" class="form-control" placeholder="Preference 2 ID" minlength="7" maxlength="7" required="required">
 						</div>
 					</div>
+					<h4>Preference 3</h4>
+
 					<div class="form-group">
 						<div class="col-sm-12">
 							<input type="text" name="pf3" class="form-control" placeholder="Preference 3 ID" minlength="7" maxlength="7" required="required">

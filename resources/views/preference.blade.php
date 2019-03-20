@@ -51,8 +51,78 @@
 </head>
 <body>
 
+<!--
+ It contains Navbar
+-->
+ <style type="text/css">
+   #nav {
+    position: relative;
+    top: 20px;
 
-  @include('profile.navbar')
+}
+.nav-item{
+    font-size: 1.2em;
+    text-align: right;
+    padding: 0px;
+    margin: 0;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: #2f4c73;
+    border-radius: .2em;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    background-color: #2f4c73;
+    color: white;
+    transition: .4s;
+}
+
+</style>
+
+<div style="background-color: white;height: 90px;border-color:#2f4c73;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+   <div class="navbar-header">
+       <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="navbar-collapse">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+       </button>
+       <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="80" style="padding-top: 10px;padding-left: 15px" width="300" src="{{ asset('img/logo3.jpg') }}" alt=""></a>
+   </div>
+   <div id="nav_pc" style="margin-top: 1.4em" class="collapse navbar-collapse">
+
+
+
+           <?php 
+           if (Auth::check()) {
+            ?>          
+              <a href="{{ url('/logout') }}">
+            
+            <button  style="margin-right: 5px;"  name="logout" class="btn btn-danger navbar-btn navbar-right" > Logout</button>
+            </a>
+          <?php 
+          }
+          ?>
+
+       <button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/brochure.pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
+       <ul style=" margin-right: 10px"  class="nav navbar-nav navbar-right ">
+
+           <li class="nav_list"><a href="{{ url('/') }}">Home</a></li>
+           <li class="nav_list"><a href="{{ url('/faq') }}" >FAQs</a></li>
+           <li class="nav_list"><a href="{{ url('/#contact') }}">Contact us</a></li>
+
+
+
+
+
+       </ul>
+
+   </div>
+
+
+</div>
+
+
   <br>
   <br>
   <br>
@@ -84,10 +154,7 @@
         <th>ID</th>
         <th>Area of Expertise</th>
         <th>Department</th>
-        <th>Preference 1</th>
-        <th>Preference 2</th>
-        <th>Preference 3</th>
-        <th>Current City</th>
+        
         <th>Firm</th>
         
 
@@ -103,22 +170,7 @@
         <td>19MP00{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
-        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
-
-        <?php } ?>
-
-        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-        <?php } ?>
-        <td>{{$mentor['ccity']}}</td>
+        
         <td>{{$mentor['firm']}}</td>
 
 
@@ -131,22 +183,7 @@
         <td>19MP00{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
-        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
-
-        <?php } ?>
-
-        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-        <?php } ?>
-        <td>{{$mentor['ccity']}}</td>
+        
         <td>{{$mentor['firm']}}</td>
 
 
@@ -159,22 +196,7 @@
         <td>19MP0{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{App\PreferenceCode::find($mentor->pref1)->codename}}</td>
-        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
-
-        <?php } ?>
-
-        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-        <?php } ?>
-        <td>{{$mentor['ccity']}}</td>
+        
         <td>{{$mentor['firm']}}</td>
 
 
@@ -188,22 +210,7 @@
         <td>19MP0{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{App\PreferenceCode::find($mentor->pref1)->codename}}</td>
-        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
-
-        <?php } ?>
-
-        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-        <?php } ?>
-        <td>{{$mentor['ccity']}}</td>
+        
         <td>{{$mentor['firm']}}</td>
 
 
@@ -217,22 +224,7 @@
         <td>19MP{{$mentor['id']}}</td> 
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
-        <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
-        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
-
-        <?php } ?>
-
-        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-        <?php } ?>
-        <td>{{$mentor['ccity']}}</td>
+        
         <td>{{$mentor['firm']}}</td>
 
 
@@ -247,21 +239,7 @@
         <td>{{$mentor['foe']}}</td>        
         <td class="email">{{$mentor['department'].' '}}</td>
         <td>{{App\PreferenceCode::find($mentor['pref1'])->codename}}</td>
-        <?php if ($mentor['pref2'] == 'Choose your 2nd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref2'])->codename}}</td>
-
-        <?php } ?>
-
-        <?php if ($mentor['pref3'] == 'Choose your 3rd Preference')  { ?>
-        <td>-----</td>
-        <?php } 
-        else { ?>
-        <td>{{App\PreferenceCode::find($mentor['pref3'])->codename}}</td>
-        <?php } ?>
-        <td>{{$mentor['ccity']}}</td>
+        
         <td>{{$mentor['firm']}}</td>
 
       </tr>
@@ -281,6 +259,10 @@
 
 
       <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
+      <a href="{{ url('/show') }}">
+
+      <button   name="prev" class="btn btn-success "  > Previous Page</button>
+    </a>
   </div>
 
   
@@ -289,6 +271,10 @@
     <a href="#">
 
       <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
+    </a>
+    <a href="{{ url('/show') }}">
+
+      <button   name="prev" class="btn btn-success "  > Previous Page</button>
     </a>
   </div>
   @endif

@@ -1,5 +1,96 @@
-@extends('profile.master')
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="img/p.png">
+  <title>Welcome to Mentorship-Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href="{{ asset('css/bootstrap-social.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/social_icon.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+  <!--
+ It contains Navbar
+-->
+ <style type="text/css">
+
+
+#nav {
+    position: relative;
+    top: 20px;
+
+}
+.nav-item{
+    font-size: 1.2em;
+    text-align: right;
+    padding: 0px;
+    margin: 0;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: #2f4c73;
+    border-radius: .2em;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    background-color: #2f4c73;
+    color: white;
+    transition: .4s;
+}
+
+</style>
+</head>
+<body background="img/bg.jpg">
+
+<div style="background-color: white;height: 90px;border-color:#2f4c73;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+   <div class="navbar-header">
+       <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="navbar-collapse">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+       </button>
+       <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="80" style="padding-top: 10px;padding-left: 15px" width="300" src="{{ asset('img/logo3.jpg') }}" alt=""></a>
+   </div>
+   <div id="nav_pc" style="margin-top: 1.4em" class="collapse navbar-collapse">
+
+
+
+           <?php 
+           if (Auth::check()) {
+            ?>          
+              <a href="{{ url('/logout') }}">
+            
+            <button  style="margin-right: 5px;"  name="logout" class="btn btn-danger navbar-btn navbar-right" > Logout</button>
+            </a>
+          <?php 
+          }
+          ?>
+
+       <button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/brochure.pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
+       <ul style=" margin-right: 10px"  class="nav navbar-nav navbar-right ">
+
+           <li class="nav_list"><a href="{{ url('/') }}">Home</a></li>
+           <li class="nav_list"><a href="{{ url('/faq') }}" >FAQs</a></li>
+           <li class="nav_list"><a href="{{ url('/#contact') }}">Contact us</a></li>
+
+
+
+
+
+       </ul>
+
+   </div>
+
+
+</div>
+
+
+  <br><br><br><br><br>
 <div class="container">
   <div class="row">
 
@@ -65,6 +156,8 @@
     <li class="active"><a href="#home">Home</a></li>
    <!-- <li><a href="#menu1">Guidelines</a></li> -->
     <li><a href="#menu2">Give Preferences</a></li>
+    <li><a href="#menu3">Show Preferences</a></li>
+
     @else()
     <li class="active"><a href="#menu4">My Mentor</a></li>
    
@@ -88,13 +181,13 @@
 2) Go through the list of mentors in the “Give Preferences” tab carefully and look for the alumni whose interests / hometown / area of expertise match with yours. 
 <br>
 <br>
-3) After carefully evaluating the list of alumni on the web page, choose five alumni who you want to be mentored by and fill their Mentor IDs in the space given below in the descending order of preference. 
+3) After carefully evaluating the list of alumni on the web page, choose three alumni who you want to be mentored by and fill their Mentor IDs in the space given below in the descending order of preference. 
 <br>
 <br>
 <b>4) The mentors who have been marked red have been alloted to the fullest of their capacity. Kindly ignore those mentors while filling in the choices.</b>
 <br>
 <br>
-5) After filling in the five text fields with distinct preferences, check once again and click on the submit button. 
+5) After filling in the three text fields with distinct preferences, check once again and click on the submit button. 
 <br>
 <br>
 6) Please remember that the preference once submitted cannot be changed. 
@@ -119,19 +212,49 @@
 <br>
 <br>
       <div  align="center" >
-            <span style="color: red"><b>The preference portal is closed due to technical issues. Sorry for the inconvenience caused.</b></span> <br><br>
-            <a href="#">
-            <button   name="givepreference" class="btn btn-success " disabled> View Mentors Profile</button>
-            <br><br>
             
-            </div>
+            <a href="{{ url('/givepreference') }}">
+            <button   name="givepreference" class="btn btn-success " > View Mentors Profile</button>
+            <br><br>
+            </a>
+      </div>
 
     </div>
 
+<div id="menu3" class="tab-pane fade">
+<br>
+<br>
+    @if(App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
+      <?php $mentee = App\Preference::where('mentee_email',Auth::user()->email)->get(); ?>
+        <div  align="center" style="font-size: 20px">
+          <p>You have entered the following preferences:</p>
+        </div>
+        <br>
+        <table cellspacing="0" width="100%">
+        <tr>
+          <td style="text-align: center;">{{ $mentee[0]['pf1'] }}</td>
+          <td style="text-align: center;">{{ $mentee[0]['pf2'] }}</td>
+          <td style="text-align: center;">{{ $mentee[0]['pf3'] }}</td>
+
+        </tr>
+        </table>
+        <br><br>
+        <div  align="center" >
+          <p style="font-size: 15px">You have not been allotted a Mentor yet. Please keep checking the portal for further updates.</p>
+        </div>
+    @else()
+        
+        <div  align="center" >
+          <p>You have not provided a preference yet.</p>
+        </div>
+
+    @endif
+
+
+</div>
     
 
 
-        @else()
         <div id="menu4" class="tab-pane fade in active">
 <br>
 <br>
@@ -139,9 +262,7 @@
 @if(App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
 <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
       @if($mentorid[0]['mentorid']==0)
-            <div  align="center" >
-          <p>You have not been allotted a Mentor yet.Please keep checking the portal for further updates.</p>
-              </div>
+            
 
       @else()
   
@@ -203,7 +324,6 @@
 
 
   </div>
-
 <!-- cdns are in profile master-->
   <script>
 $(document).ready(function(){
@@ -224,4 +344,5 @@ $(document).ready(function(){
   </div>
 
 </div>
-@endsection('content')
+</body>
+</html>
