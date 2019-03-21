@@ -268,7 +268,7 @@
   
   @else 
   <div  align="center" >
-    <a href="#">
+    <a href="{{ url('/gpreference') }}">
 
       <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
     </a>

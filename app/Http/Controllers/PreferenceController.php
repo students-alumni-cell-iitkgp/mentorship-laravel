@@ -84,7 +84,7 @@ class PreferenceController extends Controller
                 ]);
                    $data = array();
                    $menteeNo = array();
-                   $data['mentor_allotted'] = substr($prefs->pf1, -1);
+                   $data['mentor_allotted'] = substr($prefs->pf1, -3, 3);
                    $Number = DB::table('mentors')->where('id', $data['mentor_allotted'])->value('full');
                    $max = DB::table('mentors')->where('id', $data['mentor_allotted'])->value('mentee');
                    if($Number >= $max)
