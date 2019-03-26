@@ -189,7 +189,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']<= $mentor['mentee'])
+      @elseif ( $mentor['id'] < 99 && $mentor['id'] > 9 && $mentor['full']< $mentor['mentee'])
 
       <tr>
 
@@ -217,7 +217,7 @@
 
 
       </tr>
-      @elseif ( $mentor['id'] > 99 && $mentor['full']<= $mentor['mentee'])
+      @elseif ( $mentor['id'] > 99 && $mentor['full']< $mentor['mentee'])
 
       <tr>
 
