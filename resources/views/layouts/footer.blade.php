@@ -27,16 +27,16 @@
 
 <div class="row">
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Naman Agrawal <br>agarwalnaman20@gmail.com<br>+91-7478077999
+        Madhumita Paul <br>paulmadhumita101@gmail.com <br>+91-9408700634
     </div>
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Gautam Arya<br>gautam25arya@gmail.com <br>+91-8349702291
+        Shishir Shahi<br>shishirshahi3@gmail.com <br>+91-8317865559
     </div>
 
 
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Vasanta Majety <br>vasantamajety@gmail.com
-        <br>+91-7477745444
+        Swaraj Prakash <br>swarajmvm@gmail.com
+        <br>+91-9827258975
     </div>
     
 

@@ -54,7 +54,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
        </button>
-       <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="80" style="padding-top: 10px;padding-left: 15px" width="300" src="{{ asset('img/logo3.jpg') }}" alt=""></a>
+       <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="80" style="padding-top: 10px;padding-left: 15px" width="150" src="{{ asset('img/SAMP_logo_2020.png') }}" alt=""></a>
    </div>
    <div id="nav_pc" style="margin-top: 1.4em" class="collapse navbar-collapse">
 
@@ -214,9 +214,10 @@
       <div  align="center" >
             
             <a href="{{ url('/givepreference') }}">
-            <button   name="givepreference" class="btn btn-success " > View Mentors Profile</button>
+            <button   name="givepreference" class="btn btn-success " disabled> View Mentors Profile</button>
             <br><br>
             </a>
+            <p style="color:red">Will start soon!</p>
       </div>
 
     </div>
