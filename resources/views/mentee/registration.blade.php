@@ -117,6 +117,7 @@
 								<option value="RP">Rajendra Prasad  Hall</option>
 								<option value="RLB">Rani Laxmibai  Hall</option>
 								<option value="SN">Sarojini Naidu / Indira Gandhi  Hall</option>
+								<option value="SNVH"> Sister Nivedita Hall </option>
 								<option value="VS">Vidyasagar  Hall</option>
 								<option value="VSRC">Vikram Sarabhai Residential Complex</option>
 								<option value="ZH">Zakir Hussain  Hall</option>
