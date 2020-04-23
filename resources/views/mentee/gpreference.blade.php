@@ -18,7 +18,7 @@
 			</div>
 			<div class="modal-body">
 
-				<h5 style="color: red"><center>**Please enter the exact Mentor codes as preferences. For example to enter the preference of a mentor with id '19MPXXX', enter '19MPXXX' in the input box.</center></h4>
+				<h5 style="color: red"><center>**Please enter the exact Mentor codes as preferences. For example to enter the preference of a mentor with id '20MPXXX', enter '20MPXXX' in the input box.</center></h4>
 
 				<form class="form-horizontal" method="post" action="{{ url('/gpreference') }}">
 					{{ csrf_field() }}
