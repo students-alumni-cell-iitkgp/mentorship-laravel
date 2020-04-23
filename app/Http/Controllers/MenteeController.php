@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mentee;
 use App\User;
+use DB;
 class MenteeController extends Controller
 {
 	/*
@@ -37,42 +38,45 @@ class MenteeController extends Controller
 	public function store()
 
 	{
-
 		$this->validate(request(),[
 			'password' => 'required|confirmed'
 		]);
-		Mentee::create([
-			'name' => request('name'),
-			'password' => request('password'),
-			'department' => request('department'),
-			'email' => request('email'),
-			'hall' =>request('hall'),
-			'roll' => request('roll'),
-			'pref1' =>request('pref1'),
-			'pref2' =>request('pref2'),
-			'pref3' =>request('pref3'),
-			'q1' => request('q1'),
-			'q2' => request('q2'),
-			'cgpa' => request('cgpa'),
-			'current' => request('current'),
-			'hcity' => request('hcity'),
-			'phone' => request('phone'),			
-			'fb'=>request('fb'),
-			'linkedin'=>request('linkedin'),
-			'mentorid' => '0',
-			'mentor_allotted' => '0'
+		$mentee = DB::table('mentees')->where('email',request('email'))->first();
+		if (Mentee::where('email', '=',request('email'))->exists()) {
+			return redirect()->back()->with('message', 'User already exists!');
+		}
+		else{
 
+			Mentee::create([
+				'name' => request('name'),
+				'password' => request('password'),
+				'department' => request('department'),
+				'email' => request('email'),
+				'hall' =>request('hall'),
+				'roll' => request('roll'),
+				'pref1' =>request('pref1'),
+				'pref2' =>request('pref2'),
+				'pref3' =>request('pref3'),
+				'q1' => request('q1'),
+				'q2' => request('q2'),
+				'cgpa' => request('cgpa'),
+				'current' => request('current'),
+				'hcity' => request('hcity'),
+				'phone' => request('phone'),			
+				'fb'=>request('fb'),
+				'linkedin'=>request('linkedin'),
+				'mentorid' => '0',
+				'mentor_allotted' => '0'
+			]);
+			$user = User::create([
+				'name' => request('name'),
+				'password' => request('password'),
+				'type' => 'mentee',
+				'email' => request('email'),
+			]);
+			auth()->login($user);// login the user using auth controller
+			return redirect('/show/'.$user->id);// sends get request to showcontroller with user id	
+		}
 
-
-		]);
-		$user = User::create([
-			'name' => request('name'),
-			'password' => request('password'),
-			'type' => 'mentee',
-			'email' => request('email'),
-		]);
-
-		auth()->login($user);// login the user using auth controller
-		return redirect('/show/'.$user->id);// sends get request to showcontroller with user id	
 	}
 }

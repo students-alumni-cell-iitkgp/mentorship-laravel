@@ -19,7 +19,12 @@
 				</a>
 				<h4 class="modal-title" style="text-align:center;">Register  Here</h4>
 			</div>
-			<div class="modal-body">				
+			<div class="modal-body">	
+				@if(session()->has('message'))
+					    <div class="alert alert-success">
+					        {{ session()->get('message') }}
+					    </div>
+					@endif			
 				<form class="form-horizontal" method="post" action="{{url('/mentee_registration')}}">
 					{{ csrf_field() }}
 
