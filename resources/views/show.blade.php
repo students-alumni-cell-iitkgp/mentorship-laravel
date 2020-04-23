@@ -214,10 +214,10 @@
       <div  align="center" >
             
             <a href="{{ url('/givepreference') }}">
-            <button   name="givepreference" class="btn btn-success " disabled> View Mentors Profile</button>
+            <button   name="givepreference" class="btn btn-success "> View Mentors Profile</button>
             <br><br>
             </a>
-            <p style="color:red">Will start soon!</p>
+            <!-- <p style="color:red">Will start soon!</p> -->
       </div>
 
     </div>

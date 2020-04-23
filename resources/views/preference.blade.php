@@ -147,6 +147,33 @@
     </div>
     @endif
     
+    @if( App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
+  <div  align="center" >
+        <span style="color: red"><b>You have already submitted your preferences!</b></span>
+        <br>
+
+
+      <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
+      <a href="{{ url('/show') }}">
+
+      <button   name="prev" class="btn btn-success "  > Previous Page</button>
+    </a>
+  </div>
+
+  
+  @else 
+  <div  align="center" >
+    <a href="{{ url('/gpreference') }}">
+
+      <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
+    </a>
+    <a href="{{ url('/show') }}">
+
+      <button   name="prev" class="btn btn-success "  > Previous Page</button>
+    </a>
+  </div>
+  @endif
+
     <br>
     <table id="example" class="display" cellspacing="0" width="100%">
       <thead>
@@ -248,36 +275,6 @@
     </tbody>
   </table>
   <br>
-
- 
-  
-  
-  @if( App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
-  <div  align="center" >
-        <span style="color: red"><b>You have already submitted your preferences!</b></span>
-        <br>
-
-
-      <button   name="gpreference" class="btn btn-success " disabled> Give Your Preferences</button>
-      <a href="{{ url('/show') }}">
-
-      <button   name="prev" class="btn btn-success "  > Previous Page</button>
-    </a>
-  </div>
-
-  
-  @else 
-  <div  align="center" >
-    <a href="{{ url('/gpreference') }}">
-
-      <button   name="gpreference" class="btn btn-success "  > Give Your Preferences</button>
-    </a>
-    <a href="{{ url('/show') }}">
-
-      <button   name="prev" class="btn btn-success "  > Previous Page</button>
-    </a>
-  </div>
-  @endif
 
   <br>
   <br>
