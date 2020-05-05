@@ -160,7 +160,6 @@
 
     @else()
     <li class="active"><a href="#menu4">My Mentor</a></li>
-   
     @endif
     
   </ul>
@@ -256,10 +255,10 @@
     
 
 
-        <div id="menu4" class="tab-pane fade in active">
+<div id="menu4" class="tab-pane fade in active">
 <br>
 <br>
-
+@else ()
 @if(App\Preference::where('mentee_email',Auth::user()->email)->count()>0)
 <?php $mentorid = App\Mentee::where('email',Auth::user()->email)->get(); ?>
       @if($mentorid[0]['mentorid']==0)
@@ -270,20 +269,13 @@
           <p><h4> Congratulations,you have been allotted a mentor. We hope that it turns out to be a fruitful experience for you. The details of your mentor are as follows - </h4></p> 
 
       <br>
-      <h5>
+      <h4>
 <strong>Name:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->name }}
 <br>
 
 <strong>Email:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->email }}
 <br>
 
-<strong>Facebook Id:</strong> <a href="{{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->fb }}" target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->fb }} </a>
-<br>
-
-<strong>LinkedIn Id:</strong> <a href=" {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
-"  target="_blank"> {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->linkedin }}
-    </a>
-    <br>
 <strong>Field of Expertise:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->foe }}
 <br>    
 <strong>Firm:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->firm }}
@@ -291,7 +283,7 @@
 <!--<strong>Designation:</strong>  {{ $mentor = App\Mentor::find($mentorid[0]['mentorid'])->desg }}-->
 <br>
 
-    </h5>
+    </h4>
         
         <br>
         
