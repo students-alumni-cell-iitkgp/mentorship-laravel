@@ -18,7 +18,7 @@
     <!-- <p>Email: mentorship@adm.iitkgp.ernet.in</p> -->
     <p>In case of any suggestions or query please feel free to write to us at <a href="mailto: mentorship@adm.iitkgp.ernet.in">mentorship@adm.iitkgp.ernet.in</a></p>
 </div>
-<a href="http://www.sac.iitkgp.ac.in/team.php" target="_blank" class="btn btn-success btn-block">
+<a href="http://sac.iitkgp.ac.in/team.php" target="_blank" class="btn btn-success btn-block">
     View Complete Team
 </a>
 
@@ -27,16 +27,16 @@
 
 <div class="row">
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Madhumita Paul <br>paulmadhumita101@gmail.com <br>+91-9408700634
+        Akash Srivastava <br>akashshrivastava3144@gmail.com <br>+91-9547572222
     </div>
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Shishir Shahi<br>shishirshahi3@gmail.com <br>+91-8317865559
+        Subhadra Jena<br>subhadra99jena@gmail.com <br>+91-7838902041
     </div>
 
 
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Swaraj Prakash <br>swarajmvm@gmail.com
-        <br>+91-9827258975
+        Nitika Shroff <br>nitika30051999@gmail.com
+        <br>+91-9007732515
     </div>
     
 
