@@ -65,7 +65,7 @@ class EloquentUserProvider implements UserProvider
         $model = $model->where($model->getAuthIdentifierName(), $identifier)->first();
 
         if (! $model) {
-            return null;
+            return;
         }
 
         $rememberToken = $model->getRememberToken();
@@ -101,7 +101,9 @@ class EloquentUserProvider implements UserProvider
      */
     public function retrieveByCredentials(array $credentials)
     {
-        if (empty($credentials)) {
+        if (empty($credentials) ||
+           (count($credentials) === 1 &&
+            array_key_exists('password', $credentials))) {
             return;
         }
 
@@ -128,19 +130,9 @@ class EloquentUserProvider implements UserProvider
      */
     public function validateCredentials(UserContract $user, array $credentials)
     {
-
-        // for reference watch https://www.youtube.com/watch?v=5eDuQ8wGI-k
-
         $plain = $credentials['password'];
-        //dd($plain, $user->getAuthPassword());
-        if(($plain)== ($user->getAuthPassword())){
 
-            return true;
-        }else{
-            return false;
-        }
-
-        //return $this->hasher->check($plain, $user->getAuthPassword());
+        return $this->hasher->check($plain, $user->getAuthPassword());
     }
 
     /**
