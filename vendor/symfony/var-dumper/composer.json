@@ -28,7 +28,6 @@
     },
     "suggest": {
         "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
-        "ext-intl": "To show region name in time zone dump",
         "ext-symfony_debug": ""
     },
     "autoload": {
@@ -38,5 +37,10 @@
             "/Tests/"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.3-dev"
+        }
+    }
 }

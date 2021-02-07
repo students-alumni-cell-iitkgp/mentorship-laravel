@@ -12,8 +12,8 @@
 namespace Symfony\Component\Console\Tests\Helper;
 
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Console\Helper\ProgressBar;
+use Symfony\Component\Console\Helper\Helper;
 use Symfony\Component\Console\Output\StreamOutput;
 
 /**
@@ -21,19 +21,6 @@ use Symfony\Component\Console\Output\StreamOutput;
  */
 class ProgressBarTest extends TestCase
 {
-    private $colSize;
-
-    protected function setUp()
-    {
-        $this->colSize = getenv('COLUMNS');
-        putenv('COLUMNS=120');
-    }
-
-    protected function tearDown()
-    {
-        putenv($this->colSize ? 'COLUMNS='.$this->colSize : 'COLUMNS');
-    }
-
     public function testMultipleStart()
     {
         $bar = new ProgressBar($output = $this->getOutputStream());
@@ -477,16 +464,16 @@ class ProgressBarTest extends TestCase
 
         rewind($output->getStream());
         $this->assertEquals(
-            '   0/200 [>---------------------------]   0%'.\PHP_EOL.
-            '  20/200 [==>-------------------------]  10%'.\PHP_EOL.
-            '  40/200 [=====>----------------------]  20%'.\PHP_EOL.
-            '  60/200 [========>-------------------]  30%'.\PHP_EOL.
-            '  80/200 [===========>----------------]  40%'.\PHP_EOL.
-            ' 100/200 [==============>-------------]  50%'.\PHP_EOL.
-            ' 120/200 [================>-----------]  60%'.\PHP_EOL.
-            ' 140/200 [===================>--------]  70%'.\PHP_EOL.
-            ' 160/200 [======================>-----]  80%'.\PHP_EOL.
-            ' 180/200 [=========================>--]  90%'.\PHP_EOL.
+            '   0/200 [>---------------------------]   0%'.PHP_EOL.
+            '  20/200 [==>-------------------------]  10%'.PHP_EOL.
+            '  40/200 [=====>----------------------]  20%'.PHP_EOL.
+            '  60/200 [========>-------------------]  30%'.PHP_EOL.
+            '  80/200 [===========>----------------]  40%'.PHP_EOL.
+            ' 100/200 [==============>-------------]  50%'.PHP_EOL.
+            ' 120/200 [================>-----------]  60%'.PHP_EOL.
+            ' 140/200 [===================>--------]  70%'.PHP_EOL.
+            ' 160/200 [======================>-----]  80%'.PHP_EOL.
+            ' 180/200 [=========================>--]  90%'.PHP_EOL.
             ' 200/200 [============================] 100%',
             stream_get_contents($output->getStream())
         );
@@ -503,8 +490,8 @@ class ProgressBarTest extends TestCase
 
         rewind($output->getStream());
         $this->assertEquals(
-            '  0/50 [>---------------------------]   0%'.\PHP_EOL.
-            ' 25/50 [==============>-------------]  50%'.\PHP_EOL.
+            '  0/50 [>---------------------------]   0%'.PHP_EOL.
+            ' 25/50 [==============>-------------]  50%'.PHP_EOL.
             ' 50/50 [============================] 100%',
             stream_get_contents($output->getStream())
         );
@@ -518,7 +505,7 @@ class ProgressBarTest extends TestCase
 
         rewind($output->getStream());
         $this->assertEquals(
-            '    0 [>---------------------------]'.\PHP_EOL.
+            '    0 [>---------------------------]'.PHP_EOL.
             '    1 [->--------------------------]',
             stream_get_contents($output->getStream())
         );
@@ -765,12 +752,12 @@ class ProgressBarTest extends TestCase
      */
     public function provideFormat()
     {
-        return [
-            ['normal'],
-            ['verbose'],
-            ['very_verbose'],
-            ['debug'],
-        ];
+        return array(
+            array('normal'),
+            array('verbose'),
+            array('very_verbose'),
+            array('debug'),
+        );
     }
 
     protected function getOutputStream($decorated = true, $verbosity = StreamOutput::VERBOSITY_NORMAL)
