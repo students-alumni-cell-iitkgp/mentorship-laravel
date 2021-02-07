@@ -13,9 +13,9 @@ namespace Symfony\Component\Console\Tester;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\StreamOutput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Output\StreamOutput;
 
 /**
  * Eases the testing of console commands.
@@ -28,9 +28,12 @@ class CommandTester
     private $command;
     private $input;
     private $output;
-    private $inputs = [];
+    private $inputs = array();
     private $statusCode;
 
+    /**
+     * @param Command $command A Command instance to test
+     */
     public function __construct(Command $command)
     {
         $this->command = $command;
@@ -50,7 +53,7 @@ class CommandTester
      *
      * @return int The command exit code
      */
-    public function execute(array $input, array $options = [])
+    public function execute(array $input, array $options = array())
     {
         // set the command name automatically if the application requires
         // this argument and no command name was passed
@@ -58,12 +61,13 @@ class CommandTester
             && (null !== $application = $this->command->getApplication())
             && $application->getDefinition()->hasArgument('command')
         ) {
-            $input = array_merge(['command' => $this->command->getName()], $input);
+            $input = array_merge(array('command' => $this->command->getName()), $input);
         }
 
         $this->input = new ArrayInput($input);
-        // Use an in-memory input stream even if no inputs are set so that QuestionHelper::ask() does not rely on the blocking STDIN.
-        $this->input->setStream(self::createStream($this->inputs));
+        if ($this->inputs) {
+            $this->input->setStream(self::createStream($this->inputs));
+        }
 
         if (isset($options['interactive'])) {
             $this->input->setInteractive($options['interactive']);
@@ -87,16 +91,12 @@ class CommandTester
      */
     public function getDisplay($normalize = false)
     {
-        if (null === $this->output) {
-            throw new \RuntimeException('Output not initialized, did you execute the command before requesting the display?');
-        }
-
         rewind($this->output->getStream());
 
         $display = stream_get_contents($this->output->getStream());
 
         if ($normalize) {
-            $display = str_replace(\PHP_EOL, "\n", $display);
+            $display = str_replace(PHP_EOL, "\n", $display);
         }
 
         return $display;
@@ -135,8 +135,8 @@ class CommandTester
     /**
      * Sets the user inputs.
      *
-     * @param array $inputs An array of strings representing each input
-     *                      passed to the command input stream
+     * @param array an array of strings representing each input
+     *              passed to the command input stream
      *
      * @return CommandTester
      */
@@ -151,10 +151,7 @@ class CommandTester
     {
         $stream = fopen('php://memory', 'r+', false);
 
-        foreach ($inputs as $input) {
-            fwrite($stream, $input.\PHP_EOL);
-        }
-
+        fwrite($stream, implode(PHP_EOL, $inputs));
         rewind($stream);
 
         return $stream;

@@ -1,13 +1,8 @@
 <!--
     It contains footer 
 -->
-
-<div align = "center">
-    <video width="60%" controls>
-        <source src="{{ asset('img/SAMP_FINAL(1).mp4') }}" type="video/mp4">
-    </video>
-</div>
 <hr>
+
 <h3 id="contact" style="text-align: center">
     Contact Us
 </h3>
