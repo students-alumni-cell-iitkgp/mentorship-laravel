@@ -23,7 +23,7 @@
     <!-- <p>Email: aao@hijli.iitkgp.ernet.in</p> -->
    
     <!-- <p>Email: mentorship@adm.iitkgp.ernet.in</p> -->
-    <p>In case of any suggestions or query please feel free to write to us at <a href="mailto: mentorship@adm.iitkgp.ernet.in">mentorship@adm.iitkgp.ernet.in</a></p>
+    <p>In case of any suggestions or query please feel free to write to us at <a href="mailto: studentsalumnicell.iitkgp@gmail.com">studentsalumnicell.iitkgp@gmail.com</a></p>
 </div>
     <a href="http://sac.iitkgp.ac.in/team.php" target="_blank" class="btn btn-success btn-block">
     View Complete Team
