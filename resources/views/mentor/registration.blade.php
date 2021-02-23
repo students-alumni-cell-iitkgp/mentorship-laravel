@@ -122,7 +122,8 @@
 						<div class="col-sm-4">
 							<select required name='mentee' class="form-control">
 								<option  value="" disabled selected >No. of Mentees</option>
-								<option value="2" @if (old('mentee') == '2') selected="selected" @endif>Two</option>
+                                                                <option value="1" @if (old('mentee') == '1') selected="selected" @endif>One</option>
+                                                                <option value="2" @if (old('mentee') == '2') selected="selected" @endif>Two</option>
 								<option value="3" @if (old('mentee') == '3') selected="selected" @endif>Three</option>
 								<option value="4" @if (old('mentee') == '4') selected="selected" @endif>Four</option>
 								<option value="5" @if (old('mentee') == '5') selected="selected" @endif>Five</option>
