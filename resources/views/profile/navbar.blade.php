@@ -34,7 +34,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
        </button>
-       <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="93" src="img/samp_logo.png" alt=""></a>
+       <a style="padding: 0px;margin-left: 0px" class="navbar-brand" href="#"><img height="93" src="{{ asset('img/Asset_1.png') }}" alt=""></a>
    </div>
    <div id="nav_pc" style="margin-top: 1.4em" class="collapse navbar-collapse">
               <a href="{{url('/logout')}}">
@@ -43,7 +43,7 @@
             </a>
 
 
-             <button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/brochure.pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
+             <button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/brochure_fullcopy(4).pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
 
 
 

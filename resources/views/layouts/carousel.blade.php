@@ -14,15 +14,15 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner" style="margin-top:10px;">
 			<div class="item active">
-				<img src="{{ asset('img/SAMP_slider_2020.jpg') }}" alt="Info">
+				<img src="{{ asset('img/COVER_BLUE.jpg') }}" alt="Info">
 			</div>
 
 			<div class="item">
-				<img src="{{ asset('img/SAMP_slider_2020_2.jpg') }}" alt="Alumni Registration">
+				<img src="{{ asset('img/alumni_registration-slider.jpg') }}" alt="Alumni Registration">
 			</div>
 
 			<div class="item">
-				<img src="{{ asset('img/SAMP_infograph_2020.jpg') }}" alt="Student Registration">
+				<img src="{{ asset('img/main_slider.jpg') }}" alt="Student Registration">
 			</div>
 		</div>
 

@@ -170,7 +170,7 @@
 
 					<div class="form-group">
 						<div class="col-sm-12">
-							<input type="text" name="hcity" class="form-control" placeholder="Enter your hometown/Location of Summer Internship" required="required" maxlength="40">
+							<input type="text" name="hcity" class="form-control" placeholder="Enter your current location" required="required" maxlength="40">
 						</div>
 </div>
 
