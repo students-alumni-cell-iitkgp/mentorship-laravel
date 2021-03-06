@@ -216,7 +216,6 @@
             <button   name="givepreference" class="btn btn-success "> View Mentors Profile</button>
             <br><br>
             </a>
-            <p style="color:red">Will start soon!</p>
       </div>
 
     </div>
