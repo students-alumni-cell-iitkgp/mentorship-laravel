@@ -34,16 +34,16 @@
 
 <div class="row">
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Akash Srivastava <br>akashshrivastava3144@gmail.com <br>+91-9547572222
+        Vikas Ahlawat <br>vickyahlawat2019@gmail.com <br>+91-8397070108
     </div>
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Subhadra Jena<br>subhadra99jena@gmail.com <br>+91-7838902041
+        Tarun Majety<br>tarunmajety.tarun@gmail.com <br>+91-7602443444
     </div>
 
 
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-         Nitika Shroff <br>nitika30051999@gmail.com
-        <br>+91-9007732515
+         Satyam Jha <br>jhasatyam991@gmail.com
+        <br>+91-6200797159
     </div>
     
 
