@@ -8,7 +8,6 @@
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
 
 		<!-- Wrapper for slides -->
@@ -19,10 +18,6 @@
 
 			<div class="item">
 				<img src="{{ asset('img/samp 3.1.jpg') }}" alt="Alumni Registration">
-			</div>
-
-			<div class="item">
-				<img src="{{ asset('img/SAMP-fb-cover-7.jpg') }}" alt="Student Registration">
 			</div>
 		</div>
 
