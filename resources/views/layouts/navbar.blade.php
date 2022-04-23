@@ -51,7 +51,7 @@
           }
           ?>
 
-<button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/brochure_fullcopy(4).pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
+<button style="background-color:#2f4c73;border: 0px;font-stretch: expanded;margin-right: 5px;" onclick="window.open('img/SAMP final brochure.pdf')"  class="btn btn-danger navbar-btn navbar-right">SAMP Brochure</button>
        <ul style=" margin-right: 10px"  class="nav navbar-nav navbar-right ">
 
            <li class="nav_list"><a href="{{ url('/') }}">Home</a></li>
