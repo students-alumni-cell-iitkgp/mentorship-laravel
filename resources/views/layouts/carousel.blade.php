@@ -2,12 +2,23 @@
 <!--
 	It contains carousel with three slider,indicators and conterols 	
 -->
-<div id="bg">
+<style>
+    .cour{
+        width:100%;
+        background-size:100% 100%;
+    }
+    .corousel, .carousel-inner, .item img{
+        width:100%;
+        background-size:100% 100%;
+    }
+</style>
+<div class = "cour">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
 		</ol>
 
 		<!-- Wrapper for slides -->
@@ -16,7 +27,11 @@
 				<img src="{{ asset('img/SAMP-SR.png') }}" alt="Info">
 			</div>
 
-			<div class="item">
+			<div class="item" style="background-size:100% 100%;" >
+				<img src="{{ asset('img/samp4.jpeg') }}" alt="samp" >
+			</div>
+
+            <div class="item">
 				<img src="{{ asset('img/samp 3.1.jpg') }}" alt="Alumni Registration">
 			</div>
 		</div>
