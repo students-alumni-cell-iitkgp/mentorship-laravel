@@ -17,7 +17,7 @@
 <div align="center">
 
     <h2>Students' Alumni Cell</h2>
-    <h3>Office of Alumni Affairs & International Relations</h3>
+    <h3>Office of Alumni Affairs & Branding</h3>
     <p>Indian Institute of Technology, Kharagpur</p>
     <p>West Bengal, India. Pin :- 721302</p>
     <!-- <p>Email: aao@hijli.iitkgp.ernet.in</p> -->
