@@ -34,16 +34,16 @@
 
 <div class="row">
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Vikas Ahlawat <br>vickyahlawat2019@gmail.com <br>+91-8397070108
+        Ashish Kumar Shah <br>ashishshah090@gmail.com <br>+91-8630679428
     </div>
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-        Tarun Majety<br>tarunmajety.tarun@gmail.com <br>+91-7602443444
+        Prerit Goyal <br>preritgoyal0203@gmail.com <br>+91-8989020473
     </div>
 
 
     <div class="col-md-4" style="font:bold 15px Calibri; text-align:center">
-         Satyam Jha <br>jhasatyam991@gmail.com
-        <br>+91-6200797159
+         Shreyansh Jha <br>shreyanshjha52@gmail.com
+        <br>+91-9636777987
     </div>
     
 

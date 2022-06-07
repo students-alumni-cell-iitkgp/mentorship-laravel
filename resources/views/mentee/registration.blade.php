@@ -186,6 +186,7 @@
 								<option value='26'>Software Development</option>
 								<option value="27">Marketing</option>
 								<option value="28">Civil Services</option>
+								<option value="29">Product Management</option>
 								<optgroup label="Core Fields"></optgroup>
 								<option value='1'>Aerospace Engineering</option>
 								<option value='2'>Agricultural & Food Engineering</option>
@@ -225,6 +226,7 @@
 								<option value='26'>Software Development</option>
 								<option value="27">Marketing</option>
 								<option value="28">Civil Services</option>
+								<option value="29">Product Management</option>
 								<optgroup label="Core Fields"></optgroup>
 								<option value='1'>Aerospace Engineering</option>
 								<option value='2'>Agricultural & Food Engineering</option>
@@ -264,6 +266,7 @@
 								<option value='26'>Software Development</option>
 								<option value="27">Marketing</option>
 								<option value="28">Civil Services</option>
+								<option value="29">Product Management</option>
 								<optgroup label="Core Fields"></optgroup>
 								<option value='1'>Aerospace Engineering</option>
 								<option value='2'>Agricultural & Food Engineering</option>

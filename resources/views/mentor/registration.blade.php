@@ -147,6 +147,7 @@
 								<option value='26' @if (old('pref1') == '26') selected="selected" @endif>Software Development</option>
 								<option value="27" @if (old('pref1') == '27') selected="selected" @endif>Marketing</option>
 								<option value="28" @if (old('pref1') == '28') selected="selected" @endif>Civil Services</option>
+								<option value="29" @if (old('pref1') == '29') selected="selected" @endif>Product Management</option>
 								<optgroup label="Core Fields"></optgroup>
 								<option value='1' @if (old('pref1') == '1') selected="selected" @endif>Aerospace Engineering</option>
 								<option value='2' @if (old('pref1') == '2') selected="selected" @endif>Agricultural & Food Engineering</option>
@@ -197,6 +198,7 @@
 								<option value='26' @if (old('pref2') == '26') selected="selected" @endif>Software Development</option>
 								<option value="27" @if (old('pref2') == '27') selected="selected" @endif>Marketing</option>
 								<option value="28" @if (old('pref2') == '28') selected="selected" @endif>Civil Services</option>
+								<option value="29" @if (old('pref1') == '29') selected="selected" @endif>Product Management</option>
 								<optgroup label="Core Fields"></optgroup>
 								<option value='1' @if (old('pref2') == '1') selected="selected" @endif>Aerospace Engineering</option>
 								<option value='2' @if (old('pref2') == '2') selected="selected" @endif>Agricultural & Food Engineering</option>
@@ -233,6 +235,7 @@
 								<option value='26' @if (old('pref3') == '26') selected="selected" @endif>Software Development</option>
 								<option value="27" @if (old('pref3') == '27') selected="selected" @endif>Marketing</option>
 								<option value="28" @if (old('pref3') == '28') selected="selected" @endif>Civil Services</option>
+								<option value="29" @if (old('pref1') == '29') selected="selected" @endif>Product Management</option>
 								<optgroup label="Core Fields"></optgroup>
 								<option value='1' @if (old('pref3') == '1') selected="selected" @endif>Aerospace Engineering</option>
 								<option value='2' @if (old('pref3') == '2') selected="selected" @endif>Agricultural & Food Engineering</option>
