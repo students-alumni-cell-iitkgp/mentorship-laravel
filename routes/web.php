@@ -16,7 +16,7 @@ Route::get('/show/{id}','ProfileController@index');// loggin the user after regi
 Route::get('/show','ProfileController@show')->name('home');// opens the profile page
 Route::post('/show','ProfileController@store');// authenticate the user and loggin the user
 Route::get('/logout','ProfileController@destroy');//log out the user
-
+Route::get('adminPage','adminPageController@index');
 /*password Resed */
 Route::get('/password/reset','Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('/password/email','Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
